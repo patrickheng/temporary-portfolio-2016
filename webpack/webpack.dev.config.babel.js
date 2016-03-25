@@ -25,7 +25,8 @@ export default {
       '',
       '.js',
       '.jsx',
-      '.json'
+      '.json',
+      '.scss'
     ]
   },
   module: {
@@ -43,12 +44,7 @@ export default {
         loader: 'html'
       },
       {
-        test: /\.handlebars$/,
-        exclude: /node_modules/,
-        loader: 'handlebars'
-      },
-      {
-        test: /\.js$/,
+        test: /\.js?$/,
         exclude: /node_modules/,
         loader: 'babel'
       },
