@@ -1,0 +1,60 @@
+{
+  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "ecmaFeatures": {
+    "classes": true,
+    "forOf": true,
+    "es6": true,
+    "blockBindings": true
+  },
+  "rules": {
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "semi": 1,
+    "no-multiple-empty-lines": [2, {"max": 2, "maxEOF": 0}],
+    "no-var": 1
+  },
+  "globals": {
+    "__DEV__": true,
+    "__PROD__": true,
+    "THREE": true,
+    "React": true,
+    "Vue": true,
+    "TimelineLite": false,
+    "TimelineMax": false,
+    "TweenLite": false,
+    "TweenMax": false,
+    "Back": false,
+    "Bounce": false,
+    "Circ": false,
+    "Cubic": false,
+    "Ease": false,
+    "EaseLookup": false,
+    "Elastic": false,
+    "Expo": false,
+    "Linear": false,
+    "Power0": false,
+    "Power1": false,
+    "Power2": false,
+    "Power3": false,
+    "Power4": false,
+    "Quad": false,
+    "Quart": false,
+    "Quint": false,
+    "RoughEase": false,
+    "Sine": false,
+    "SlowMo": false,
+    "SteppedEase": false,
+    "Strong": false,
+    "Draggable": false,
+    "SplitText": false,
+    "VelocityTracker": false,
+    "CSSPlugin": false,
+    "ThrowPropsPlugin": false,
+    "BezierPlugin": false
+  }
+}
