@@ -17,7 +17,8 @@
     "semi": 1,
     "no-multiple-empty-lines": [2, {"max": 2, "maxEOF": 0}],
     "no-var": 1,
-    "no-unused-vars": 0
+    "no-unused-vars": 0,
+    "no-undef": 0
   },
   "globals": {
     "__DEV__": true,
