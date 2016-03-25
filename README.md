@@ -1,15 +1,12 @@
-# VueJs Boilerplate - Babel / Webpack / Sass
-
-![Banner](http://i.imgur.com/G2Uqw43.png)
+# Patrick Heng - Temporary portfolio 2016
 
 #### TECHNOLOGIES
 
-* VueJs
+* Preact
 * GSAP - TweenMax
 * Babel | ES2015
 * Webpack
 * ESLint
-* ESDoc
 * SASS
 
 ##### Install dependancies :
@@ -29,6 +26,6 @@ The project will be launched at http://localhost:3000/
   npm run build
 ```
 
-Hope you like it ¯\_(ツ)_/¯
+Hope you :purple_heart: it 
 
-![Gif](https://media.giphy.com/media/SGjUlcZYnFs6Q/giphy.gif)
+![Gif](https://media.giphy.com/media/vAGmzKscQlF5e/giphy.gif)
