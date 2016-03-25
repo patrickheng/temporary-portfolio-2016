@@ -4,6 +4,7 @@ import Component from 'core/Component';
 import 'gsap'
 
 import HeaderComponent from 'components/HeaderComponent';
+import SliderComponent from 'components/SliderComponent';
 
 import 'stylesheets/main.scss';
 
@@ -14,7 +15,8 @@ class Main extends Component {
     super({
       $el: root,
       subComponents: {
-        HeaderComponent
+        HeaderComponent,
+        SliderComponent
       }
     });
 
