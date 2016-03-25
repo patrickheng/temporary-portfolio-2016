@@ -2,6 +2,8 @@ import 'stylesheets/main.scss';
 
 import { h, render, Component } from 'preact';
 import 'gsap';
+
+import domready from 'domready';
 import FastClick from 'fastclick';
 
 
@@ -26,4 +28,7 @@ class Main extends Component {
   }
 }
 
-render(<Main />, document.body);
+domready(() => {
+
+  render(<Main />, document.body);
+});

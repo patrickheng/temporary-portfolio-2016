@@ -6,13 +6,14 @@ from 'pixi.js';
 
 class Scene {
 
-  constructor() {
-    
-    this.width = window.innerWidth;
-    this.height = window.innerHeight;
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+
     this.renderer = new autoDetectRenderer(this.width, this.height, {
       antialias: true
     });
+
     this.renderer.backgroundColor = 0x101010;
 
     this.stage = new Container();
