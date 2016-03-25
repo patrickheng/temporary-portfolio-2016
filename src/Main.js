@@ -1,54 +1,33 @@
-import domready from 'domready';
-import States from 'core/States';
-import Component from 'core/Component';
-import 'gsap'
+import { h, render, Component } from 'preact';
+import 'gsap';
 
-import HeaderComponent from 'components/HeaderComponent';
-import SliderComponent from 'components/SliderComponent';
 
 import 'stylesheets/main.scss';
 
-class Main extends Component {
 
-  constructor(root) {
-
-    super({
-      $el: root,
-      subComponents: {
-        HeaderComponent,
-        SliderComponent
-      }
-    });
-
-    this.bind();
-
-    this.addEventListeners();
-
-    this.$root = root;
-
-    this.start();
+class Clock extends Component {
+  constructor() {
+    super();
+    // set initial time:
+    this.state.time = Date.now();
   }
 
-  bind() {}
-
-  addEventListeners() {}
-
-  start() {
-    this.addDeviceTypeClass();
-    this.addBrowserNameClass();
+  componentDidMount() {
+    // update time every second
+    this.timer = setInterval(() => {
+      this.setState({ time: Date.now() });
+    }, 1000);
   }
 
-  addDeviceTypeClass() {
-    this.$root.classList.add(`${States.deviceType}-device`);
+  componentWillUnmount() {
+    // stop when not renderable
+    clearInterval(this.timer);
   }
 
-  addBrowserNameClass() {
-    this.$root.classList.add(`${States.browserName}-browser`);
+  render(props, state) {
+    let time = new Date(state.time).toLocaleTimeString();
+    return <span>{ time }</span>;
   }
 }
 
-domready(() => {
-
-  const root = document.getElementById('application');
-  new Main(root);
-});
+render(<Clock />, document.body);

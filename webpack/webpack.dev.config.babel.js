@@ -18,7 +18,8 @@ export default {
   resolve: {
     root: path.resolve( __dirname, '..', 'src' ),
     alias: {
-      'Component': 'core/Component'
+      'Component': 'core/Component',
+      'react': 'preact-compat'
     },
     extensions: [
       '',
