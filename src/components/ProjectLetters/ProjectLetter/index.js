@@ -6,8 +6,6 @@ import States from 'core/States';
 
 import Emitter from 'core/Emitter';
 
-import ProjectLetter from './ProjectLetter';
-
 import {
   PROJECT_CHANGE
 } from 'config/messages';
@@ -15,7 +13,7 @@ import {
 class ProjectLetters extends Component {
 
   state = {
-    currentProjectName: States.currentProject
+    currentProject: States.currentProject
   }
 
   constructor() {
@@ -46,24 +44,19 @@ class ProjectLetters extends Component {
   }
 
   removeListerners() {
-    Emitter.off(PROJECT_CHANGE, this.onProjectChange);
+
   }
 
-  onProjectChange(currentProjectName) {
-    this.setState({ currentProjectName });
+  onProjectChange(currentProject) {
+    this.setState({ currentProject });
   }
+
 
   render(props, state) {
-    let letters = [];
-
-    for (let i = 0; i < state.currentProjectName.length; i++) {
-      letters.push(<ProjectLetter letter={state.currentProjectName[i]}/>)
-    }
-
     return (
-      <div class="project-letters">
-        {letters}
-      </div>
+      <span class="project-letter">
+        {props.letter}
+      </span>
     );
   }
 
