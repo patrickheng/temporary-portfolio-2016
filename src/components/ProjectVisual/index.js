@@ -41,6 +41,7 @@ class ProjectVisual extends Component {
   }
 
   removeListerners() {
+    Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
   onProjectChange(currentProject) {
