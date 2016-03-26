@@ -1,0 +1,14 @@
+.project-container {
+  position: absolute;
+  width: 80%;
+  max-width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+
+  .project-container_content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}

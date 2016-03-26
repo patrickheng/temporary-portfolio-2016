@@ -4,13 +4,13 @@ import debounce from 'lodash.debounce';
 
 import Emitter from 'core/Emitter';
 
-import ProjectContainer from 'components/ProjectContainer';
+import States from 'core/States';
 
 import {
   WINDOW_RESIZE
 } from 'config/messages';
 
-class Application extends Component {
+class ProjectLetter extends Component {
 
   constructor() {
     super();
@@ -52,12 +52,12 @@ class Application extends Component {
   render(props, state) {
 
     return (
-      <div class="application">
-        <ProjectContainer/>
+      <div class="project-letter">
+        {props.letter}
       </div>
     );
   }
 
 }
 
-export default Application;
+export default ProjectLetter;

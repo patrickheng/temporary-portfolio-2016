@@ -6,7 +6,7 @@ import States from 'core/States';
 
 import Emitter from 'core/Emitter';
 
-import ProjectLetter from './ProjectLetter';
+import ProjectLetter from 'components/ProjectLetter';
 
 import {
   PROJECT_CHANGE
