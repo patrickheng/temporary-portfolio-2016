@@ -4,6 +4,7 @@ import debounce from 'lodash.debounce';
 
 import Emitter from 'core/Emitter';
 
+import ProjectLetters from 'components/ProjectLetters';
 import ProjectVisual from 'components/ProjectVisual';
 
 import {
@@ -53,9 +54,8 @@ class Application extends Component {
 
     return (
       <div class="application">
-
+        <ProjectLetters />
         <ProjectVisual />
-
       </div>
     );
   }

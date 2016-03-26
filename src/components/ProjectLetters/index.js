@@ -1,13 +1,16 @@
 import { h, Component } from 'preact';
 
-import Emitter from 'core/Emitter';
+import debounce from 'lodash.debounce';
+
 import States from 'core/States';
+
+import Emitter from 'core/Emitter';
 
 import {
   PROJECT_CHANGE
 } from 'config/messages';
 
-class ProjectVisual extends Component {
+class ProjectLetters extends Component {
 
   state = {
     currentProject: States.currentProject
@@ -41,24 +44,25 @@ class ProjectVisual extends Component {
   }
 
   removeListerners() {
+
   }
 
   onProjectChange(currentProject) {
     this.setState({ currentProject });
   }
 
+  broadcastWindowOnResize() {
+
+  }
+
   render(props, state) {
     return (
-      <div class="project-visual">
-        <div class="project-visual_container">
-          <ul class="project-visual__list">
-            <li class="project-visual__el" style="background: url(http://lorempicsum.com/up/600/600/3)">{state.currentProject}</li>
-          </ul>
-        </div>
+      <div class="project-letters">
+
       </div>
     );
   }
 
 }
 
-export default ProjectVisual;
+export default ProjectLetters;
