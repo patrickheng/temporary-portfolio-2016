@@ -53,7 +53,7 @@ class ProjectVisual extends Component {
       <div class="project-visual">
         <div class="project-visual_container">
           <ul class="project-visual__list">
-            <li class="project-visual__el" style="background: url(http://lorempicsum.com/up/600/600/3)">{state.currentProject}</li>
+            <li class="project-visual__el" style="background: url(/images/codevember.jpg) center no-repeat;">{state.currentProject}</li>
           </ul>
         </div>
       </div>

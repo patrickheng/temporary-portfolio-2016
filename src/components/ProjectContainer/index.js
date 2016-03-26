@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 
 import ProjectLetters from 'components/ProjectLetters';
 import ProjectVisual from 'components/ProjectVisual';
+import ProjectInfos from 'components/ProjectInfos';
 
 
 class Application extends Component {
@@ -40,6 +41,7 @@ class Application extends Component {
         <div class="project-container_content">
           <ProjectLetters />
           <ProjectVisual />
+          <ProjectInfos />
         </div>
       </div>
     );

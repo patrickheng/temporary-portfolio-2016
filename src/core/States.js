@@ -11,7 +11,7 @@ class States {
     this.mobileDetect = new MobileDetect(this.userAgent);
     this.deviceType = this.getDeviceType();
     this.browserName = browser.name;
-    this.currentProject = projects[0].ref;
+    this.currentProject = projects[0];
   }
 
   getDeviceType() {

@@ -1,12 +1,7 @@
 import { h, Component } from 'preact';
 
-import debounce from 'lodash.debounce';
-
-import States from 'core/States';
-
 import Emitter from 'core/Emitter';
-
-import ProjectLetter from 'components/ProjectLetter';
+import States from 'core/States';
 
 import {
   PROJECT_CHANGE
@@ -15,7 +10,7 @@ import {
 class ProjectLetters extends Component {
 
   state = {
-    currentProject: States.currentProject
+    currentProject: States.projects[0]
   }
 
   constructor() {
@@ -31,8 +26,7 @@ class ProjectLetters extends Component {
 
     this.addListerners();
 
-
-    this.base.classList.add(`project-letters--${this.state.currentProject.ref}`);
+    this.base.classList.add(`project-infos--${this.state.currentProject.ref}`);
   }
 
   componentWillUnmount() {
@@ -54,20 +48,15 @@ class ProjectLetters extends Component {
 
   onProjectChange(currentProject) {
     this.setState({ currentProject });
-    this.base.className = "project-letter";
-    this.base.classList.add(`project-letters--${this.state.currentProject.ref}`);
+    this.base.className = "project-infos";
+    this.base.classList.add(`project-infos--${this.state.currentProject.ref}`);
   }
 
   render(props, state) {
-    let letters = [];
-
-    for (let i = 0; i < state.currentProject.letters.length; i++) {
-      letters.push(<ProjectLetter letter={state.currentProject.letters[i]}/>)
-    }
 
     return (
-      <div class="project-letters">
-        {letters}
+      <div class="project-infos">
+        <ul></ul>
       </div>
     );
   }

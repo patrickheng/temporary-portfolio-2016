@@ -1,9 +1,51 @@
 .project-letters {
-  position: relative;
+
+}
+
+.project-letters--codevember {
+  .project-letter {
+    color: $color-codevember;
+    &:nth-child(1) {
+      top: 0%;
+      left: -7%;
+    }
+    &:nth-child(2) {
+      top: 17%;
+      left: 19%;
+    }
+    &:nth-child(3) {
+      top: 30%;
+      left: 50%;
+    }
+    &:nth-child(4) {
+      top: 55%;
+      left: 23%;
+    }
+    &:nth-child(5) {
+      top: 75%;
+      left: 60%;
+    }
+    &:nth-child(6) {
+      top: 95%;
+      left: 90%;
+    }
+  }
 }
 
 .project-letter {
   position: absolute;
-  left: 0;
-  top: 0;
+  display: block;
+  font-size: 20vh;
+  line-height: 0;
+  z-index: 1;
+
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: $color-codevember;
+  }
 }
+
