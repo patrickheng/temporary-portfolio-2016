@@ -1,36 +1,44 @@
 import raf from 'raf';
 import PIXI from 'pixi.js';
-import now from 'performance-now';
 import randomInt from 'utils/maths/random-int';
 import randomFloat from 'utils/maths/random-float';
 
 import Scene from './Scene';
+import MaskParticule from './MaskParticule';
 
 class PixiApp {
-  constructor(root) {
+  constructor(root, drawingCanvas) {
 
     this.root = root;
+
+    this.width = 0;
+    this.height = 0;
+
     this.updateActive = true;
 
     this.videoRatio = 854/480;
 
+    this.drawingCanvas = drawingCanvas;
+
+    this.background = new PIXI.Sprite();
+
+    this.mask = new PIXI.Sprite();
+
+    this.bind();
+
     setTimeout(()=> {
+
+      this.setCanvasSize();
+
       this.scene = new Scene(this.width, this.height);
 
       this.root.appendChild(this.scene.renderer.view);
 
-      this.setSize();
-
-      var video = document.createElement("video");
+      const video = document.createElement("video");
       video.preload = "auto";
       video.loop = true;
-      video.oncanplay = this.drawVideo(video);
+      video.oncanplay = this.drawBackground(video);
       video.src = '/videos/sample.mp4';
-
-      this.setVideoSize();
-
-
-      this.bind();
 
       this.update();
 
@@ -40,51 +48,101 @@ class PixiApp {
   bind() {
 
     this.update = this.update.bind(this);
+    this.onMouseMove = this.onMouseMove.bind(this);
   }
 
-  drawVideo(videoSrc) {
+  drawBackground(videoSrc) {
+    // this.setMask();
 
-    this.videoTexture = PIXI.Texture.fromVideo(videoSrc);
-    this.videoSprite = new PIXI.Sprite(this.videoTexture);
+    const videoTexture = PIXI.Texture.fromVideo(videoSrc);
 
-    this.scene.addChild(this.videoSprite);
+    this.background.texture = new PIXI.Texture(videoTexture);
 
-    this.setVideoSize();
-    this.scene.resize(this.width, this.height);
+    // this.background.mask = this.mask;
+
+    this.scene.addChild(this.mask);
+
+    this.setSizeByRatio(this.background);
+
+    this.scene.addChild(this.background);
+    this.scene.render();
+
   }
 
-  setSize() {
+  setCanvasSize() {
     this.boundingRect = this.root.getBoundingClientRect();
     this.width = this.boundingRect.width;
     this.height = this.boundingRect.height;
     this.windowRatio = this.width / this.height;
+
+    this.drawingCanvas.setSize(this.width, this.height);
   }
 
-  setVideoSize() {
+  setSizeByRatio(el) {
 
     this.boundingRect = this.root.getBoundingClientRect();
 
     if(this.windowRatio >= this.videoRatio) { // Video wider than container
-      this.videoSprite.width = this.boundingRect.width;
-      this.videoSprite.height = this.boundingRect.height * this.videoRatio;
+      el.width = this.boundingRect.width;
+      el.height = this.boundingRect.height * this.videoRatio;
 
-      this.videoSprite.position.x = 0;
-      this.videoSprite.position.y = (this.boundingRect.height - this.videoSprite.height) / 2;
+      el.position.x = 0;
+      el.position.y = (this.boundingRect.height - el.height) / 2;
     } else {
-      this.videoSprite.width = this.boundingRect.width * this.videoRatio;
-      this.videoSprite.height = this.boundingRect.height;
+      el.width = this.boundingRect.width * this.videoRatio;
+      el.height = this.boundingRect.height;
 
-      this.videoSprite.position.x = (this.boundingRect.width - this.videoSprite.width) / 2;
-      this.videoSprite.position.y = 0;
+      el.position.x = (this.boundingRect.width - el.width) / 2;
+      this.background.position.y = 0;
     }
 
+
+  }
+
+  setMask() {
+    this.setCanvasSize();
+
+    var myMask = new PIXI.Graphics();
+    myMask.beginFill();
+    myMask.drawCircle(0, 0, 300);
+    myMask.drawCircle(200, 0, 300);
+    myMask.endFill();
+
+
+
+    this.scene.addChild(myMask)
+    this.mask = myMask;
+    this.mask.alpha = 0.5;
+
+    this.scene.addChild(this.mask);
+  }
+
+  changeProject() {
+
+  }
+
+  onWindowResize() {
+    this.setCanvasSize();
+    this.setSizeByRatio(this.background);
+
+    this.scene.resize(this.width, this.height);
+  }
+
+  onMouseMove({mouseX, mouseY}) {
+    const maskParticule = new MaskParticule({mouseX, mouseY, background: this.background});
+    this.scene.addChild(maskParticule.getEl());
   }
 
   update() {
 
     if(this.updateActive) {
 
+      this.drawingCanvas.update();
+
+      // this.mask.texture.update();
+
       this.scene.render();
+
       this.raf = raf(this.update);
 
     } else {
@@ -92,14 +150,6 @@ class PixiApp {
       raf.cancel(this.raf);
 
     }
-
-  }
-
-  onWindowResize() {
-    this.setSize();
-    this.setVideoSize();
-
-    this.scene.resize(this.width, this.height);
   }
 }
 

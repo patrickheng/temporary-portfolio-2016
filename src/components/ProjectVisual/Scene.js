@@ -11,7 +11,8 @@ class Scene {
     this.height = height;
 
     this.renderer = new autoDetectRenderer(this.width, this.height, {
-      antialias: true
+      antialias: true,
+      transparent: true
     });
 
     this.renderer.backgroundColor = 0x101010;
