@@ -7,7 +7,7 @@ import {
   PROJECT_CHANGE
 } from 'config/messages';
 
-class ProjectNavigation extends Component {
+class ProjectTags extends Component {
 
   state = {
     currentProject: States.projects[0]
@@ -26,7 +26,7 @@ class ProjectNavigation extends Component {
 
     this.addListerners();
 
-    this.base.classList.add(`project-navigation--${this.state.currentProject.ref}`);
+    this.base.classList.add(`project-tags--${this.state.currentProject.ref}`);
   }
 
   componentWillUnmount() {
@@ -48,20 +48,21 @@ class ProjectNavigation extends Component {
 
   onProjectChange(currentProject) {
     this.setState({ currentProject });
-    this.base.className = "project-navigation";
-    this.base.classList.add(`project-navigation--${this.state.currentProject.ref}`);
+    this.base.className = "project-tags";
+    this.base.classList.add(`project-tags--${this.state.currentProject.ref}`);
   }
 
   render(props, state) {
 
     return (
-      <div class="project-navigation">
-        <button class="project-navigation_el project-navigation_el--previous">Previous</button>
-        <button class="project-navigation_el project-navigation_el--next">Next</button>
+      <div class="project-tags">
+        <ul class="projects-tags__list">
+          <li class="projects-tags__el"></li>
+        </ul>
       </div>
     );
   }
 
 }
 
-export default ProjectNavigation;
+export default ProjectTags;

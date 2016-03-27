@@ -25,8 +25,6 @@ class ProjectTags extends Component {
   componentDidMount() {
 
     this.addListerners();
-
-    this.base.classList.add(`project-tags--${this.state.currentProject.ref}`);
   }
 
   componentWillUnmount() {
@@ -48,15 +46,14 @@ class ProjectTags extends Component {
 
   onProjectChange(currentProject) {
     this.setState({ currentProject });
-    this.base.className = "project-tags";
-    this.base.classList.add(`project-tags--${this.state.currentProject.ref}`);
   }
 
   render(props, state) {
 
     return (
-      <div class="project-tags">
-        <ul></ul>
+      <div class="project-index">
+        <span class="project-index__line"></span>
+        <span class="project-index__number">01</span>
       </div>
     );
   }

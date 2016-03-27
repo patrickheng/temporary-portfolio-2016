@@ -15,8 +15,8 @@ class Header extends Component {
 
     return (
       <header class="header">
-        <h1 class="header_logo">Patrick Heng</h1>
-        <button class="header_about">About Me</button>
+        <h1 class="header__logo">Patrick Heng</h1>
+        <button class="header__about">About Me</button>
       </header>
     );
   }

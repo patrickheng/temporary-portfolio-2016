@@ -52,8 +52,8 @@ class ProjectTags extends Component {
 
     return (
       <div class="project-index">
-        <span class="project-index_line"></span>
-        <span class="project-index_number">01</span>
+        <span class="project-index__line"></span>
+        <span class="project-index__number">01</span>
       </div>
     );
   }

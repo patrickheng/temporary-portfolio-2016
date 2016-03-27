@@ -8,7 +8,7 @@ export default {
   devtool: 'inline-source-map',
   entry: [
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
-    './src/Main.js'
+    './src/Main.jsx'
   ],
   output: {
     path: __dirname,
@@ -44,7 +44,7 @@ export default {
         loader: 'html'
       },
       {
-        test: /\.js?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel'
       },

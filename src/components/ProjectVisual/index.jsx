@@ -68,9 +68,9 @@ class ProjectVisual extends Component {
 
     return (
       <div class="project-visual">
-        <div class="project-visual_container">
-          <div class="project-visual_transition-block"></div>
-          <ul class="project-visual__list">
+        <div class="project-visual__container">
+          <div class="project-visual__transition-block"></div>
+          <ul class="project-visual___list">
             {projectVisuals}
           </ul>
         </div>
