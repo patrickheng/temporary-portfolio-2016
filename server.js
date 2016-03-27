@@ -9,7 +9,7 @@ import config from './webpack/webpack.dev.config.babel.js';
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3000 : process.env.PORT;
-const ip = 'localhost';
+const ip = '0.0.0.0';
 
 const app = express();
 const compiler = webpack(config);
