@@ -3,6 +3,8 @@
 Here is my temporary portfolio awaiting the big one.
 Special thanks to [Robin Mastromarino](https://robinmastromarino.com) for the design.
 
+![Preview](https://i.imgsafe.org/7dabec1.jpg)
+
 #### TECHNOLOGIES
 
 * Preact - *A 3kb alternative to React*
