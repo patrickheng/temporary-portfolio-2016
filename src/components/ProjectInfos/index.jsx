@@ -10,6 +10,7 @@ import {
 class ProjectLetters extends Component {
 
   state = {
+    projects: States.projects,
     currentProject: States.projects[0]
   }
 
@@ -26,7 +27,8 @@ class ProjectLetters extends Component {
 
     this.addListerners();
 
-    this.base.classList.add(`project-infos--${this.state.currentProject.ref}`);
+    this.projectInfoEls = this.base.getElementsByClassName('project-infos__el');
+    this.projectInfoEls[this.state.currentProject.id].classList.add(`project-infos__el--is-active`);
   }
 
   componentWillUnmount() {
@@ -48,15 +50,23 @@ class ProjectLetters extends Component {
 
   onProjectChange(currentProject) {
     this.setState({ currentProject });
-    this.base.className = "project-infos";
-    this.base.classList.add(`project-infos--${this.state.currentProject.ref}`);
+
+    for (var i = 0; i < this.projectInfoEls.length; i++) {
+      this.projectInfoEls[i].className = "project-infos__el";
+      this.projectInfoEls[this.state.currentProject.id].classList.add(`project-infos__el--is-active`);
+    }
   }
 
-  render(props, state) {
+  render({}, {projects}) {
+    let infos = [];
+
+    for (let i = 0; i < projects.length; i++) {
+      infos.push(<p class="project-infos__el">{projects[i].description}</p>)
+    }
 
     return (
       <div class="project-infos">
-        <ul></ul>
+          {infos}
       </div>
     );
   }

@@ -31,7 +31,7 @@ export default [
     name: 'Dragand',
     letters: 'dragand',
     role: 'Co-creator / Js developer',
-    description: 'Desktop application that allows you to get your favorite subtitles by drag and droping your file in the app',
+    description: 'Desktop application that allows you to get your favorite subtitles by drag and droping your file in the app.',
     tags: ['angularJs', 'nodeWebkit', 'producthunt'],
     links: {
       site: 'http://dragand.watch/',
@@ -44,7 +44,7 @@ export default [
     name: 'Agence',
     letters : 'tdn',
     role: 'Front-end / Back-end developer',
-    description: 'Discover the professions present in web agencies in a fun and educational way with talents du numerique',
+    description: 'Discover the professions present in web agencies in a fun and educational way with talents du numerique.',
     tags: ['angularJs', 'wordpressApi'],
     links: {
       site: 'http://agence.talentsdunumerique.com/',

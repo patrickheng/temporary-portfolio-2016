@@ -1,9 +1,20 @@
 .project-infos {
   position: absolute;
-  width: 290px;
-  height: 140px;
+  width: 315px;
+  height: 115px;
   right: -8rem;
   bottom: -4rem;
   color: $color-white;
   background: $color-red;
+  padding: 2rem;
+
+  .project-infos__el {
+    display: none;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    &--is-active {
+      display: block;
+    }
+  }
 }
