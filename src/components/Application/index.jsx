@@ -8,6 +8,7 @@ import Emitter from 'core/Emitter';
 import Header from 'components/Header';
 import ProjectContainer from 'components/ProjectContainer';
 import ProjectNavigation from 'components/ProjectNavigation';
+import SocialNetworks from 'components/SocialNetworks';
 
 import {
   WINDOW_RESIZE,
@@ -84,7 +85,8 @@ class Application extends Component {
       <div class="application">
         <Header />
         <ProjectNavigation />
-        <ProjectContainer/>
+        <ProjectContainer />
+        <SocialNetworks />
       </div>
     );
   }

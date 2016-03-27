@@ -1,13 +1,32 @@
 .social-networks {
-  .social-networs__list {
+  position: absolute;
+  left: $size-border-padding-x;
+  bottom: $size-border-padding-y;
 
-  }
-  .social-networs__el {
+  .social-networks__el {
+    display: inline-block;
+    font-size: 1.6rem;
+    vertical-align: bottom;
+    margin-right: 4rem;
+
+    a {
+      color: $color-black;
+      transition: color 0.3s ease-out;
+      &:hover {
+        color: $color-red;
+      }
+    }
+
+
+    &:last-child {
+        margin-right: 0;
+    }
+
     &--twitter {
 
     }
     &--github {
-
+      padding-top: 0.1rem;
     }
     &--linkedin {
 

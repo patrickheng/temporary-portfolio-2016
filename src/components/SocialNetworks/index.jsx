@@ -53,13 +53,19 @@ class ProjectTags extends Component {
     return (
       <ul class="social-networks">
         <li class="social-networks__el social-networks__el--twitter">
-          <span class="social-networks__icon icon icon-twitter"></span>
+          <a href="https://twitter.com/Pat_Hg" target="_blank">
+            <span class="social-networks__icon icon icon-twitter"></span>
+          </a>
         </li>
         <li class="social-networks__el social-networks__el--github">
-          <span class="social-networks__icon icon icon-github"></span>
+          <a href="https://github.com/patrickheng" target="_blank">
+            <span class="social-networks__icon icon icon-github"></span>
+          </a>
         </li>
         <li class="social-networks__el social-networks__el--linkedin">
-          <span class="social-networks__icon icon icon-linkedin"></span>
+          <a href="https://www.linkedin.com/in/patrick-heng-67043184" target="_blank">
+            <span class="social-networks__icon icon icon-linkedin"></span>
+          </a>
         </li>
       </ul>
     );
