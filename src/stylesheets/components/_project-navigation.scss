@@ -1,11 +1,15 @@
-.project-navigaton {
+.project-navigation {
 }
 
-.project-navigaton-el {
+.project-navigation_el {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
   &--previous {
-
+    left: 9rem;
   }
   &--next {
-
+    right: 9rem;
   }
 }

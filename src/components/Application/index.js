@@ -5,8 +5,9 @@ import debounce from 'lodash.debounce';
 import States from 'core/States';
 import Emitter from 'core/Emitter';
 
-import Logo from 'components/Logo';
+import Header from 'components/Header';
 import ProjectContainer from 'components/ProjectContainer';
+import ProjectNavigation from 'components/ProjectNavigation';
 
 import {
   WINDOW_RESIZE,
@@ -81,7 +82,8 @@ class Application extends Component {
 
     return (
       <div class="application">
-        <Logo />
+        <Header />
+        <ProjectNavigation />
         <ProjectContainer/>
       </div>
     );

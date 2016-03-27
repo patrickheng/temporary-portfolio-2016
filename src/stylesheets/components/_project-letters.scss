@@ -2,6 +2,9 @@
 
 }
 
+/*
+ * ===== Codevember =====
+ */
 .project-letters--codevember {
   .project-letter {
     color: $color-codevember;
@@ -32,9 +35,12 @@
   }
 }
 
+/*
+ * ===== Robin Mastromarino =====
+ */
 .project-letters--robin-mastromarino {
   .project-letter {
-    color: #2C6FEA;
+    color: $color-robin-mastromarino;
     &:nth-child(1) {
       top: 0%;
       left: 33%;
@@ -62,20 +68,41 @@
   }
 }
 
-.project-letter {
-  position: absolute;
-  display: block;
-  font-size: 20vh;
-  line-height: 0;
-  z-index: 1;
-
-  &:after {
-    display: block;
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    background: $color-codevember;
+/*
+ * ===== Dragand =====
+ */
+.project-letters--dragand {
+  .project-letter {
+     color: $color-dragand;
+     &:nth-child(1) {
+       top: 0%;
+       left: 0%;
+     }
   }
 }
 
+/*
+ * ===== Agence TDN =====
+ */
+ .project-letters--agence-tdn {
+   .project-letter {
+      color: $color-agence-tdn;
+      &:nth-child(1) {
+        top: 0%;
+        left: 0%;
+      }
+   }
+ }
+
+/*
+ * ===== Lux Operon =====
+ */
+ .project-letters--lux-operon {
+   .project-letter {
+      color: $color-lux-operon;
+      &:nth-child(1) {
+        top: 0%;
+        left: 0%;
+      }
+   }
+ }
