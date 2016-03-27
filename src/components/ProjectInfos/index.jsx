@@ -61,7 +61,12 @@ class ProjectLetters extends Component {
     let infos = [];
 
     for (let i = 0; i < projects.length; i++) {
-      infos.push(<p class="project-infos__el">{projects[i].description}</p>)
+      infos.push(
+        <div class="project-infos__el">
+          <h2 class="project-infos__title">{projects[i].name}</h2>
+          <p class="project-infos__description">{projects[i].description}</p>
+        </div>
+      );
     }
 
     return (

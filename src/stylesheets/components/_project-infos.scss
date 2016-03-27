@@ -8,13 +8,18 @@
   background: $color-red;
   padding: 2rem;
 
+  .project-infos__title {
+    display: none;
+  }
+
   .project-infos__el {
     display: none;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-
     &--is-active {
       display: block;
     }
+  }
+  .project-infos__description {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
 }

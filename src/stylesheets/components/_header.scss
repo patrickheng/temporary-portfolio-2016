@@ -29,6 +29,8 @@
   font-size: 1.4rem;
   font-weight: 500;
   transition: color 0.3s ease-out;
+  cursor: pointer;
+
   &:hover {
     color: $color-red;
   }
