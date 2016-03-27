@@ -72,6 +72,7 @@ class ProjectNavigation extends Component {
         >
           <span class="project-navigation__el-line"></span>
           <span class="project-navigation__el-text">Previous</span>
+          <span class="project-navigation__el-icon icon icon-chevron-thin-left"></span>
         </button>
 
         <button
@@ -80,7 +81,9 @@ class ProjectNavigation extends Component {
         >
           <span class="project-navigation__el-line"></span>
           <span class="project-navigation__el-text">Next</span>
+          <span class="project-navigation__el-icon icon icon-chevron-thin-right"></span>
         </button>
+
       </div>
     );
   }

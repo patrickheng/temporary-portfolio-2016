@@ -18,5 +18,20 @@
     width: 450px;
 
   }
+
+  @media only screen and (max-width: 980px) and (orientation: landscape){
+
+    width: 40%;
+  }
+
+
+  @media only screen and (max-width: 736px) and (orientation: portrait) {
+    width: 100%;
+    padding: 6rem 4rem 4rem 4rem;
+  }
+
+  @media only screen and (max-width: 736px) and (orientation: landscape) {
+    width: 40%;
+  }
 }
 

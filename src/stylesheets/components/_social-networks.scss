@@ -33,3 +33,15 @@
     }
   }
 }
+
+@media only screen and (max-width: 736px){
+
+  .social-networks {
+    left: $size-border-padding-x--small;
+    bottom: $size-border-padding-y--small;
+
+    .social-networks__el {
+      margin-right: 2rem;
+    }
+  }
+}

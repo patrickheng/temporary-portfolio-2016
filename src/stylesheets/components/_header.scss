@@ -31,7 +31,26 @@
   transition: color 0.3s ease-out;
   cursor: pointer;
 
-  &:hover {
+  .desktop-device &:hover {
     color: $color-red;
+  }
+}
+
+
+@media only screen and (max-width: 736px){
+
+  .header__logo {
+    top: $size-border-padding-y--small;
+    left: $size-border-padding-x--small;
+  }
+
+  .header__logo-subtitle {
+    top: 5.5rem;
+    left: $size-border-padding-x--small;
+  }
+
+  .header__about {
+    top: $size-border-padding-y--small + 0.3rem;
+    right: $size-border-padding-x--small;
   }
 }

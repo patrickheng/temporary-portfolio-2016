@@ -61,7 +61,7 @@ export default [
     tags: ['reactJs', 'threeJs', 'glsl', 'gobelins'],
     links: {
       site: false,
-      repository: 'https://github.com/SubmarineInteractive/Abyss'
+      repository: 'https://github.com/SubmarineInteractive/Lux-Operon'
     }
   }
 ];

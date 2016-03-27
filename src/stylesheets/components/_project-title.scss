@@ -26,8 +26,27 @@
 
 @media only screen and (max-width: 1000px) {
   .project-title {
-    top: -3.9rem;
-    left: 0;
+    top: -5.5rem;
+    left: -0.1rem;
+    right: auto;
   }
 }
 
+@media only screen and (max-width: 736px){
+  .project-title {
+    top: -3.7rem;
+  }
+}
+
+@media only screen and (max-width: 736px) and (orientation: portrait) {
+  .project-title {
+    position: static;
+    top: auto;
+    left: auto;
+    margin: 0 0 1rem 0;
+
+    .project-title__el {
+      text-align: left;
+    }
+  }
+}

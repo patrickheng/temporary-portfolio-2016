@@ -30,6 +30,9 @@ class Application extends Component {
     this.bind();
 
     this.addListerners();
+
+    this.addDeviceClass();
+    this.addBrowserClass();
   }
 
   componentWillUnmount() {
@@ -54,6 +57,14 @@ class Application extends Component {
 
     window.removeEventListerner('resize', this.onWindowResize, false);
     document.removeEventListener('keyup', this.onKeyUp, false);
+  }
+
+  addBrowserClass() {
+    this.base.classList.add(States.browserName + '-browser');
+  }
+
+  addDeviceClass() {
+    this.base.classList.add(States.deviceType + '-device');
   }
 
   broadcastWindowOnResize() {

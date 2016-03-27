@@ -23,3 +23,20 @@
     line-height: 2.4rem;
   }
 }
+
+@media only screen and (max-width: 736px) and (orientation: portrait) {
+  .project-infos {
+    position: relative;
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    height: 115px;
+    margin-top: -3rem;
+
+    .project-infos__description {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }  
+
+  }
+}
