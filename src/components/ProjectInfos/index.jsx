@@ -51,7 +51,7 @@ class ProjectLetters extends Component {
   onProjectChange(currentProject) {
     this.setState({ currentProject });
 
-    for (var i = 0; i < this.projectInfoEls.length; i++) {
+    for (let i = 0; i < this.projectInfoEls.length; i++) {
       this.projectInfoEls[i].className = "project-infos__el";
       this.projectInfoEls[this.state.currentProject.id].classList.add(`project-infos__el--is-active`);
     }

@@ -60,7 +60,7 @@ class ProjectTitle extends Component {
     let titles = [];
 
     for (let i = 0; i < projects.length; i++) {
-      titles.push(<span class="project-title__el">{projects[i].name}</span>)
+      titles.push(<span class="project-title__el">{projects[i].name}</span>);
     }
 
     return (

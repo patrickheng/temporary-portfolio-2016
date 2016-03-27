@@ -6,6 +6,7 @@ import ProjectInfos from 'components/ProjectInfos';
 import ProjectTags from 'components/ProjectTags';
 import ProjectIndex from 'components/ProjectIndex';
 import ProjectTitle from 'components/ProjectTitle';
+import ProjectLinks from 'components/ProjectLinks';
 
 
 class Application extends Component {
@@ -47,6 +48,7 @@ class Application extends Component {
           <ProjectVisual />
           <ProjectInfos />
           <ProjectTags />
+          <ProjectLinks />
         </div>
       </div>
     );
