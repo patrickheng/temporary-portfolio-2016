@@ -21,6 +21,8 @@ class ProjectTags extends Component {
 
   componentWillMount() {
     this.bind();
+
+    this.tl = new TimelineMax();
   }
 
   componentDidMount() {
@@ -53,12 +55,22 @@ class ProjectTags extends Component {
 
   onProjectChange({currentProject}) {
 
-    this.setState({ currentProject });
+    // this.setState({ currentProject });
+
+    const tagsContainerActive = this.projectEls[this.state.currentProject.id];
+    const tags = tagsContainerActive.getElementsByClassName('project-tags__tag-el');
 
     for (let i = 0; i < this.projectEls.length; i++) {
       this.projectEls[i].className = "projects-tags__project-el";
-      this.projectEls[this.state.currentProject.id].classList.add(`projects-tags__project-el--is-active`);
     }
+
+    tagsContainerActive.classList.add(`projects-tags__project-el--is-active`);
+
+    this.tl.clear();
+    this.tl.kill();
+
+    this.tl
+      .staggerFromTo(tags, 0.3, {opacity: 0, y: 5}, {opacity: 1, y: 0, ease: Power2.easeOut}, 0.2);
   }
 
   render({}, {projects}) {
