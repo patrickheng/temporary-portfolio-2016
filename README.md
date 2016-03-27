@@ -2,7 +2,7 @@
 
 #### TECHNOLOGIES
 
-* Preact
+* Preact - A 3kb alternative to React
 * GSAP - TweenMax
 * Babel | ES2015
 * Webpack
@@ -29,7 +29,7 @@ The project will be launched at http://localhost:3000/
 #### TO DO :
 * Replace emitter workflow by socrates or redux
 * Add Pixi.js experiement as background
-* Add Preact rooter and case studies
+* Add preact-rooter and case studies
 
 Hope you :purple_heart: it
 
