@@ -51,10 +51,17 @@ class ProjectTags extends Component {
   render(props, state) {
 
     return (
-      <div class="project-index">
-        <span class="project-index__line"></span>
-        <span class="project-index__number">01</span>
-      </div>
+      <ul class="social-networks">
+        <li class="social-networks__el social-networks__el--twitter">
+          <span class="social-networks__icon icon icon-twitter"></span>
+        </li>
+        <li class="social-networks__el social-networks__el--github">
+          <span class="social-networks__icon icon icon-github"></span>
+        </li>
+        <li class="social-networks__el social-networks__el--linkedin">
+          <span class="social-networks__icon icon icon-linkedin"></span>
+        </li>
+      </ul>
     );
   }
 
