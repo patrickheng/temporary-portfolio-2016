@@ -70,7 +70,7 @@ class ProjectVisual extends Component {
       <div class="project-visual">
         <div class="project-visual__container">
           <div class="project-visual__transition-block"></div>
-          <ul class="project-visual___list">
+          <ul class="project-visual__list">
             {projectVisuals}
           </ul>
         </div>

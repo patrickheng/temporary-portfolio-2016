@@ -4,12 +4,6 @@ import Emitter from 'core/Emitter';
 
 import States from 'core/States';
 
-import randomFloat from 'utils/maths/random-float'
-
-import {
-  WINDOW_RESIZE
-} from 'config/messages';
-
 class ProjectLetter extends Component {
 
   constructor() {
@@ -41,8 +35,6 @@ class ProjectLetter extends Component {
   componentWillUnmount() {
 
     this.removeListerners();
-
-    console.log("unmount")
   }
 
   bind() {
@@ -57,16 +49,11 @@ class ProjectLetter extends Component {
 
   }
 
-  broadcastWindowOnResize() {
-
-    Emitter.emit(WINDOW_RESIZE, {width: window.innerWidth, height:window.innerHeight});
-  }
-
-  render(props, state) {
+  render({letter}, {}) {
 
     return (
       <div class="project-letter">
-        {props.letter}
+        {letter}
       </div>
     );
   }

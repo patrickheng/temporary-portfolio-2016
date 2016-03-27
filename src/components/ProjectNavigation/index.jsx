@@ -56,8 +56,14 @@ class ProjectNavigation extends Component {
 
     return (
       <div class="project-navigation">
-        <button class="project-navigation__el project-navigation__el--previous">Previous</button>
-        <button class="project-navigation__el project-navigation__el--next">Next</button>
+        <button class="project-navigation__el project-navigation__el--previous">
+          <span class="project-navigation__el-line"></span>
+          <span class="project-navigation__el-text">Previous</span>
+        </button>
+        <button class="project-navigation__el project-navigation__el--next">
+          <span class="project-navigation__el-line"></span>
+          <span class="project-navigation__el-text">Next</span>
+        </button>
       </div>
     );
   }

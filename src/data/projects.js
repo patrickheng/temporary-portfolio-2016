@@ -16,7 +16,7 @@ export default [
     id: 1,
     ref: 'robin-mastromarino',
     letters: 'mastro',
-    name: "Robin Mastromarino's portfolio",
+    name: "Mastro",
     role: 'Creative developer',
     description: 'Portfolio of a talented UI/UX designer based in Paris.',
     tags: ['vueJs', 'pixiJs', 'GSAP'],
@@ -41,7 +41,7 @@ export default [
   {
     id: 3,
     ref: 'agence-tdn',
-    name: 'Agence TDN',
+    name: 'Agence',
     letters : 'tdn',
     role: 'Front-end / Back-end developer',
     description: 'Discover the professions present in web agencies in a fun and educational way with talents du numerique',

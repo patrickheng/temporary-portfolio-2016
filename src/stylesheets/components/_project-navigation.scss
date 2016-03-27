@@ -1,15 +1,54 @@
 .project-navigation {
+  .project-navigation__el {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    height: 1.8rem;
+    padding: 2rem 0;
+    &--previous  {
+      left: 0;
+      .project-navigation__el-text {
+        left: 100%;
+      }
+    }
+    &--next  {
+      right: 0;
+      .project-navigation__el-text {
+        right: 100%;
+      }
+    }
+
+  }
+
+  .project-navigation__el-line {
+    display: block;
+    position: relative;
+    top: 50%;
+    width: 9vw;
+    height: 1px;
+    background: $color-black;
+  }
+
+  .project-navigation__el-text {
+    display: block;
+    position: absolute;
+    font-size: 1.4rem;
+    top: 1.2rem;
+    padding: 0 1rem;
+  }
 }
 
-.project-navigation__el {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.4rem;
-  &--previous {
-    left: 9rem;
-  }
-  &--next {
-    right: 9rem;
+
+@media only screen and (max-width: 1000px) {
+  .project-navigation {
+    .project-navigation__el {
+      &--previous {
+        left: 5rem;
+      }
+      &--next {
+        right: 5rem;
+      }
+    }
   }
 }
