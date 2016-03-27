@@ -40,7 +40,8 @@ $ease: (
 
 $color-black: #000000;
 $color-white: #FFFFFF;
-
+$color-grey-medium: #656565;
+$color-red: #d41f25;
 $color-codevember: #d21024;
 $color-robin-mastromarino: #d21024;
 $color-dragand: #d21024;
@@ -51,8 +52,12 @@ $color-lux-operon: #d21024;
 * Fonts
 */
 
+$font-edmon: 'EdmondSans', Helvetica, Arial, sans-serif;
 
 /*
 * Size
 */
+
+$size-border-padding-x: 5rem;
+$size-border-padding-y: 5rem;
 

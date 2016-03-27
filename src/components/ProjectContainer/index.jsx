@@ -41,7 +41,6 @@ class Application extends Component {
     return (
       <div class="project-container">
         <div class="project-container__content">
-          <ProjectLetters />
           <ProjectIndex />
           <ProjectVisual />
           <ProjectInfos />

@@ -1,3 +1,42 @@
 .project-index {
+  position: absolute;
+  display: block;
+  height: 30%;
+  width: 10px;
+  left: -2.5rem;
 
+  .project-index__line {
+    position: absolute;
+    display: block;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: $color-black;
+  }
+
+  .project-index__number {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 1rem;
+  }
+
+  .project-index__total {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 3rem;
+    color: $color-grey-medium;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -1.8rem;
+      left: 0;
+      margin-top: 1.2rem;
+      width: 100%;
+      height: 1px;
+      background: $color-black;
+    }
+  }
 }

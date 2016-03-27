@@ -1,13 +1,27 @@
 .header__logo {
   position: absolute;
-  top: 5rem;
-  left: 5rem;
-  font-size: 2rem;
+  top: $size-border-padding-y;
+  left: $size-border-padding-x;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background: $color-black;
+  color: $color-white;
+  padding: 0.8rem 1rem;
+}
+
+.header__logo-subtitle {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.27rem;
+  top: 8.5rem;
+  position: absolute;
+  left: $size-border-padding-x;
 }
 
 .header__about {
   position: absolute;
-  top: 5rem;
-  right: 5rem;
-  font-size: 2rem;
+  top: $size-border-padding-y + 0.3rem;
+  right: $size-border-padding-x;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
