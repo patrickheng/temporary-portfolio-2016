@@ -6,6 +6,7 @@
     cursor: pointer;
     height: 1.8rem;
     padding: 2rem 0;
+    z-index: 3;
     &--previous  {
       left: 0;
       .project-navigation__el-text {
@@ -94,6 +95,20 @@
 
     .project-navigation__el-icon {
       display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 736px) and (orientation: portrait) {
+  .project-navigation {
+    .project-navigation__el {
+      width: 10%;
+      &--previous .project-navigation__el-icon {
+        left: 0;
+      }
+      &--next .project-navigation__el-icon {
+        right: 0;
+      }
     }
   }
 }

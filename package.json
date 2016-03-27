@@ -32,6 +32,7 @@
     "fastclick": "^1.0.6",
     "global": "^4.3.0",
     "gsap": "^1.18.2",
+    "hammerjs": "^2.0.6",
     "lodash.debounce": "^4.0.3",
     "lodash.find": "^4.2.0",
     "lodash.merge": "^4.3.0",
