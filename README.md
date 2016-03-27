@@ -26,6 +26,11 @@ The project will be launched at http://localhost:3000/
   npm run build
 ```
 
+#### TO DO :
+* Replace emitter workflow by socrates or redux
+* Add Pixi.js experiement as background
+* Add Preact rooter and case studies
+
 Hope you :purple_heart: it
 
 ![Gif](https://media.giphy.com/media/vAGmzKscQlF5e/giphy.gif)
