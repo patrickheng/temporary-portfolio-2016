@@ -32,6 +32,36 @@
   }
 }
 
+.project-letters--robin-mastromarino {
+  .project-letter {
+    color: #2C6FEA;
+    &:nth-child(1) {
+      top: 0%;
+      left: 33%;
+    }
+    &:nth-child(2) {
+      top: 15%;
+      left: 14%;
+    }
+    &:nth-child(3) {
+      top: 33%;
+      left: 33%;
+    }
+    &:nth-child(4) {
+      top: 45%;
+      left: 14%;
+    }
+    &:nth-child(5) {
+      top: 55%;
+      left: 40%;
+    }
+    &:nth-child(6) {
+      top: 74%;
+      left: 15%;
+    }
+  }
+}
+
 .project-letter {
   position: absolute;
   display: block;

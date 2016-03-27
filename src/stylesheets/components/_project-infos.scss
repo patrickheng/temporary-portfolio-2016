@@ -1,8 +1,23 @@
 .project-infos {
   position: absolute;
-  width: 400px;
-  height: 200px;
-  background: black;
-  right: -3rem;
-  bottom: -3rem;
+  width: 290px;
+  height: 140px;
+  right: -8rem;
+  bottom: -4rem;
+  color: $color-white;
+  &--codevember {
+    background-color: $color-codevember;
+  }
+  &--dragand {
+    background-color: $color-dragand;
+  }
+  &--robin-mastromarino {
+    background-color: $color-robin-mastromarino;
+  }
+  &--agence-tdn {
+    background-color: $color-agence-tdn;
+  }
+  &--lux-operon {
+    background-color: $color-lux-operon;
+  }
 }

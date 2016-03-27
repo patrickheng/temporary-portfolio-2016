@@ -25,5 +25,33 @@
 .project-visual__el {
   @include fullAbsolute;
   display: block;
-  background: red;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  &--is-active {
+    opacity: 1;
+    z-index: 2;
+  }
+  &--agence-tdn {
+    background-image: url('/images/agence-tdn.jpg');
+  }
+
+  &--dragand {
+    background-image: url('/images/dragand.jpg');
+  }
+
+  &--codevember {
+    background-image: url('/images/codevember.jpg');
+  }
+
+  &--lux-operon {
+    background-image: url('/images/lux-operon.jpg');
+  }
+
+  &--robin-mastromarino {
+    background-image: url('/images/robin-mastromarino.jpg');
+  }
+
 }
