@@ -15,7 +15,7 @@ import {
 class ProjectLetters extends Component {
 
   state = {
-    currentProject: States.currentProject
+    currentProject: States.projects[0]
   }
 
   constructor() {
@@ -54,7 +54,7 @@ class ProjectLetters extends Component {
 
   onProjectChange(currentProject) {
     this.setState({ currentProject });
-    this.base.className = "project-letter";
+    this.base.className = "project-letters";
     this.base.classList.add(`project-letters--${this.state.currentProject.ref}`);
   }
 

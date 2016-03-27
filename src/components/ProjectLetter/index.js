@@ -1,10 +1,10 @@
 import { h, Component } from 'preact';
 
-import debounce from 'lodash.debounce';
-
 import Emitter from 'core/Emitter';
 
 import States from 'core/States';
+
+import randomFloat from 'utils/maths/random-float'
 
 import {
   WINDOW_RESIZE
@@ -22,26 +22,39 @@ class ProjectLetter extends Component {
     this.bind();
 
     this.addListerners();
+
+    TweenMax.from(this.base, 1, {scale: 0, opacity: 0,  ease: Expo.easeOut});
+  }
+
+  componentWillUpdate() {
+    TweenMax.killTweensOf(this.base, {scale: true, opacity: true});
+  }
+
+  componentDidUpdate() {
+
+
+    const delay = randomFloat(0, 0.5);
+
+    TweenMax.fromTo(this.base, 0.5, {scale: 0, opacity: 0}, {scale: 1, opacity: 1, delay: delay, ease: Expo.easeOut});
   }
 
   componentWillUnmount() {
 
     this.removeListerners();
+
+    console.log("unmount")
   }
 
   bind() {
 
-    this.onWindowResize = debounce(this.broadcastWindowOnResize, 100);
   }
 
   addListerners() {
 
-    window.addEventListener('resize', this.onWindowResize, false);
   }
 
   removeListerners() {
 
-    window.removeEventListerner('resize', this.onWindowResize, false);
   }
 
   broadcastWindowOnResize() {

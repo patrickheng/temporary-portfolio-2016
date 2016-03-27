@@ -10,7 +10,8 @@ import {
 class ProjectVisual extends Component {
 
   state = {
-    currentProject: States.currentProject
+    projects: States.projects,
+    currentProject: States.projects[0]
   }
 
   constructor() {
@@ -25,6 +26,9 @@ class ProjectVisual extends Component {
   componentDidMount() {
 
     this.addListerners();
+    this.visualEls = this.base.getElementsByClassName('project-visual__el');
+
+    this.visualEls[0].classList.add('project-visual__el--is-active');
   }
 
   componentWillUnmount() {
@@ -46,14 +50,28 @@ class ProjectVisual extends Component {
 
   onProjectChange(currentProject) {
     this.setState({ currentProject });
+
+    for (let i = 0; i < this.visualEls.length; i++) {
+      this.visualEls[i].classList.remove('project-visual__el--is-active');
+    }
+
+    this.visualEls[currentProject.id].classList.add('project-visual__el--is-active');
   }
 
-  render(props, state) {
+  render({}, {projects, currentProject}) {
+    let projectVisuals = [];
+
+    for (let i = 0; i < projects.length; i++) {
+      const classStr = `project-visual__el project-visual__el--${projects[i].ref}`;
+      projectVisuals.push(<li class={classStr}></li>)
+    }
+
     return (
       <div class="project-visual">
         <div class="project-visual_container">
+          <div class="project-visual_transition-block"></div>
           <ul class="project-visual__list">
-            <li class="project-visual__el" style="background: url(/images/codevember.jpg) center no-repeat;">{state.currentProject}</li>
+            {projectVisuals}
           </ul>
         </div>
       </div>
