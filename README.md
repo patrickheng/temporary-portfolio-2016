@@ -1,8 +1,11 @@
 # Patrick Heng - Temporary portfolio 2016
 
+Here is my temporary portfolio awaiting the big one.
+Special thanks to [Robin Mastromarino](https://robinmastromarino.com) for the design.
+
 #### TECHNOLOGIES
 
-* Preact - A 3kb alternative to React
+* Preact - *A 3kb alternative to React*
 * GSAP - TweenMax
 * Babel | ES2015
 * Webpack
