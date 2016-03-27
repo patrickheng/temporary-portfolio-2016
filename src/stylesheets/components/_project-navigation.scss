@@ -11,14 +11,34 @@
       .project-navigation__el-text {
         left: 100%;
       }
+
+      &:hover {
+        .project-navigation__el-line {
+          transform: translateX(-10px);
+        }
+      }
     }
     &--next  {
       right: 0;
       .project-navigation__el-text {
         right: 100%;
       }
+
+      &:hover {
+        .project-navigation__el-line {
+          transform: translateX(10px);
+        }
+      }
     }
 
+    &:hover {
+      .project-navigation__el-line {
+        background: $color-red;
+      }
+      .project-navigation__el-text {
+        color: $color-red;
+      }
+    }
   }
 
   .project-navigation__el-line {
@@ -28,6 +48,7 @@
     width: 9vw;
     height: 1px;
     background: $color-black;
+    transition: background 0.2s ease-out, transform 0.2s ease-out;
   }
 
   .project-navigation__el-text {
@@ -36,6 +57,7 @@
     font-size: 1.4rem;
     top: 1.2rem;
     padding: 0 1rem;
+    transition: color 0.2s ease-out;
   }
 }
 

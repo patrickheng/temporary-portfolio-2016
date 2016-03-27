@@ -7,6 +7,10 @@
   background: $color-black;
   color: $color-white;
   padding: 0.8rem 1rem;
+  transition: color 0.3s ease-out;
+  &:hover {
+    color: $color-red;
+  }
 }
 
 .header__logo-subtitle {
@@ -24,4 +28,8 @@
   right: $size-border-padding-x;
   font-size: 1.4rem;
   font-weight: 500;
+  transition: color 0.3s ease-out;
+  &:hover {
+    color: $color-red;
+  }
 }

@@ -5,19 +5,5 @@
   right: -8rem;
   bottom: -4rem;
   color: $color-white;
-  &--codevember {
-    background-color: $color-codevember;
-  }
-  &--dragand {
-    background-color: $color-dragand;
-  }
-  &--robin-mastromarino {
-    background-color: $color-robin-mastromarino;
-  }
-  &--agence-tdn {
-    background-color: $color-agence-tdn;
-  }
-  &--lux-operon {
-    background-color: $color-lux-operon;
-  }
+  background: $color-red;
 }
