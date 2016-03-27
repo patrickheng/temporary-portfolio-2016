@@ -31,6 +31,7 @@ The project will be launched at http://localhost:3000/
 
 #### TO DO :
 * Replace emitter workflow by socrates or redux
+* Include stylesheets in component folder
 * Add Pixi.js experiement as background
 * Add preact-rooter and case studies
 
