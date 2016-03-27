@@ -20,6 +20,7 @@ class ProjectNavigation extends Component {
 
   componentWillMount() {
     this.bind();
+    this.timeout = null;
   }
 
   componentDidMount() {
@@ -27,6 +28,10 @@ class ProjectNavigation extends Component {
     this.addListerners();
 
     this.base.classList.add(`project-navigation--${this.state.currentProject.ref}`);
+
+    this.els = this.base.querySelectorAll('.project-navigation__el');
+    this.prevEl = this.base.querySelector('.project-navigation__el--previous');
+    this.nextEl = this.base.querySelector('.project-navigation__el--next');
   }
 
   componentWillUnmount() {
@@ -46,10 +51,22 @@ class ProjectNavigation extends Component {
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
-  onProjectChange({currentProject}) {
+  onProjectChange({currentProject, direction}) {
     this.setState({ currentProject });
     this.base.className = "project-navigation";
     this.base.classList.add(`project-navigation--${this.state.currentProject.ref}`);
+
+    if(direction < 0) {
+      this.prevEl.classList.add('project-navigation__el--feedback');
+    } else {
+      this.nextEl.classList.add('project-navigation__el--feedback');
+    }
+
+    this.timeout = setTimeout(()=> {
+      for (let i = 0; i < this.els.length; i++) {
+        this.els[i].classList.remove('project-navigation__el--feedback');
+      }
+    }, 300);
   }
 
   previousProject() {

@@ -18,6 +18,18 @@
       display: block;
     }
   }
+
+  .project-infos__transition-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 10;
+  }
   .project-infos__description {
     font-size: 1.6rem;
     line-height: 2.4rem;

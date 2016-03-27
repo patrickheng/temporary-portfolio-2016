@@ -64,7 +64,7 @@ class ProjectLinks extends Component {
     this.tl.kill();
 
     this.tl
-      .staggerFromTo(links, 0.4, {x: -10, opacity: 0}, {x: 0, opacity: 1, ease: Expo.easeOut, delay: 0.3}, 0.3);
+      .staggerFromTo(links, 0.4, {x: -10, opacity: 0}, {x: 0, opacity: 1, ease: Back.easeOut, delay: 0.3}, 0.3);
 
   }
 

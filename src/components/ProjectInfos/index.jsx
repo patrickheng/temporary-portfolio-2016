@@ -21,6 +21,8 @@ class ProjectLetters extends Component {
 
   componentWillMount() {
     this.bind();
+
+    this.tl = new TimelineMax();
   }
 
   componentDidMount() {
@@ -29,6 +31,8 @@ class ProjectLetters extends Component {
 
     this.projectInfoEls = this.base.getElementsByClassName('project-infos__el');
     this.projectInfoEls[this.state.currentProject.id].classList.add(`project-infos__el--is-active`);
+
+    this.transitionBlock = this.base.querySelector('.project-infos__transition-block');
   }
 
   componentWillUnmount() {
@@ -48,13 +52,37 @@ class ProjectLetters extends Component {
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
-  onProjectChange({currentProject}) {
-    this.setState({ currentProject });
+  onProjectChange({currentProject, direction}) {
+    // this.setState({ currentProject });
 
-    for (let i = 0; i < this.projectInfoEls.length; i++) {
-      this.projectInfoEls[i].className = "project-infos__el";
-      this.projectInfoEls[this.state.currentProject.id].classList.add(`project-infos__el--is-active`);
+    let config = {};
+    const activeInfo = this.projectInfoEls[currentProject.id];
+    this.tl.clear();
+    this.tl.kill();
+
+
+    if (direction > 0)  {
+      config = {
+        startOrigin: 'left',
+        endOrigin: 'right'
+      }
+    } else {
+      config = {
+        startOrigin: 'right',
+        endOrigin: 'left'
+      }
     }
+    this.tl
+      .set(this.transitionBlock, {transformOrigin: config.startOrigin})
+      .to(this.transitionBlock, 0.5, {scaleX: 1, ease: Back.easeOut})
+      .addCallback(()=>{
+        for (let i = 0; i < this.projectInfoEls.length; i++) {
+          this.projectInfoEls[i].className = "project-infos__el";
+        }
+        activeInfo.classList.add(`project-infos__el--is-active`);
+      })
+      .set(this.transitionBlock, {transformOrigin: config.endOrigin})
+      .to(this.transitionBlock, 0.5, {scaleX: 0, ease: Back.easeOut})
   }
 
   render({}, {projects}) {
@@ -71,6 +99,7 @@ class ProjectLetters extends Component {
 
     return (
       <div class="project-infos">
+        <div class="project-infos__transition-block"></div>
           {infos}
       </div>
     );

@@ -22,6 +22,12 @@
           transform: translateX(-10px);
         }
       }
+
+      &.project-navigation__el--feedback {
+        .project-navigation__el-line {
+          transform: translateX(-20px);
+        }
+      }
     }
 
     &--next  {
@@ -34,14 +40,21 @@
         right: 3rem;
       }
 
-      &:hover {
+      .desktop-device &:hover {
         .project-navigation__el-line {
           transform: translateX(10px);
         }
       }
+
+      &.project-navigation__el--feedback {
+        .project-navigation__el-line {
+          transform: translateX(20px);
+        }
+      }
     }
 
-    .desktop-device &:hover {
+    .desktop-device &:hover,
+    &.project-navigation__el--feedback {
       .project-navigation__el-line {
         background: $color-red;
       }
