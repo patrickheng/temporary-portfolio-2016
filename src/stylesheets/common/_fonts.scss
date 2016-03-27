@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'EdmondSans';
+  src: url('/fonts/Edmondsans-Bold.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/Edmondsans-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/Edmondsans-Bold.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Edmondsans-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/Edmondsans-Bold.svg#f665bbf4c06ef0fa26f7aefb226afbb1') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'EdmondSans';
+  src: url('/fonts/Edmondsans-Medium.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/Edmondsans-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/Edmondsans-Medium.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Edmondsans-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/Edmondsans-Medium.svg#dffdf410eda6d0e903115099b5e24d7c') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  500;
+}
+
+@font-face {
+  font-family: 'EdmondSans';
+  src: url('/fonts/Edmondsans-Regular.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/Edmondsans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/Edmondsans-Regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/Edmondsans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/Edmondsans-Regular.svg#7bbba12411bdd1eb69cf9e8a612ada82') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
