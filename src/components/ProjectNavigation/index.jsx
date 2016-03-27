@@ -52,15 +52,32 @@ class ProjectNavigation extends Component {
     this.base.classList.add(`project-navigation--${this.state.currentProject.ref}`);
   }
 
+  previousProject() {
+    States.currentProjectIndex = (States.currentProjectIndex > 0) ? States.currentProjectIndex - 1 : States.projectsNb - 1;
+    Emitter.emit(PROJECT_CHANGE, States.projects[States.currentProjectIndex]);
+  }
+
+  nextProject() {
+    States.currentProjectIndex = (States.currentProjectIndex < States.projectsNb - 1) ? States.currentProjectIndex + 1 : 0;
+    Emitter.emit(PROJECT_CHANGE, States.projects[States.currentProjectIndex]);
+  }
+
   render(props, state) {
 
     return (
       <div class="project-navigation">
-        <button class="project-navigation__el project-navigation__el--previous">
+        <button
+          class="project-navigation__el project-navigation__el--previous"
+          onClick={ this.previousProject }
+        >
           <span class="project-navigation__el-line"></span>
           <span class="project-navigation__el-text">Previous</span>
         </button>
-        <button class="project-navigation__el project-navigation__el--next">
+
+        <button
+          class="project-navigation__el project-navigation__el--next"
+          onClick={ this.nextProject }
+        >
           <span class="project-navigation__el-line"></span>
           <span class="project-navigation__el-text">Next</span>
         </button>
