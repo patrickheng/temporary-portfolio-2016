@@ -21,6 +21,7 @@ class ProjectVisual extends Component {
 
   componentWillMount() {
     this.bind();
+    this.tl = new TimelineMax();
   }
 
   componentDidMount() {
@@ -48,31 +49,41 @@ class ProjectVisual extends Component {
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
-  onProjectChange({currentProject}) {
-    this.setState({ currentProject });
+  onProjectChange({currentProject, direction}) {
+    this.setState({currentProject});
+
+    const visualActive = this.visualEls[currentProject.id];
 
     for (let i = 0; i < this.visualEls.length; i++) {
       this.visualEls[i].classList.remove('project-visual__el--is-active');
     }
 
-    this.visualEls[currentProject.id].classList.add('project-visual__el--is-active');
+    visualActive.classList.add('project-visual__el--is-active');
+
+    this.tl.clear();
+    this.tl.kill();
+
+    const x = -direction * 0;
+
+    this.tl
+      .fromTo(visualActive, 2, {scale: 1.04, x: x + '%'}, {scale: 1, x: "0%", ease: Expo.easeOut})
   }
 
   render({}, {projects, currentProject}) {
     let projectVisuals = [];
 
     for (let i = 0; i < projects.length; i++) {
-      const classStr = `project-visual__el project-visual__el--${projects[i].ref}`;
-      projectVisuals.push(<li class={classStr}></li>)
+      const imgPath = `/images/${projects[i].ref}.jpg`
+      projectVisuals.push(<img class="project-visual__el" src={imgPath} />)
     }
 
     return (
       <div class="project-visual">
         <div class="project-visual__container">
           <div class="project-visual__transition-block"></div>
-          <ul class="project-visual__list">
+          <div class="project-visual__list">
             {projectVisuals}
-          </ul>
+          </div>
         </div>
       </div>
     );
