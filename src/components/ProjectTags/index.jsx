@@ -51,7 +51,7 @@ class ProjectTags extends Component {
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
-  onProjectChange(currentProject) {
+  onProjectChange({currentProject}) {
 
     this.setState({ currentProject });
 

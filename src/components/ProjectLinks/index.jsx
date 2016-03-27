@@ -21,6 +21,8 @@ class ProjectLinks extends Component {
 
   componentWillMount() {
     this.bind();
+
+    this.tl = new TimelineMax();
   }
 
   componentDidMount() {
@@ -47,13 +49,23 @@ class ProjectLinks extends Component {
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
-  onProjectChange(currentProject) {
-    this.setState({ currentProject });
+  onProjectChange({currentProject}) {
 
     for (let i = 0; i < this.projectLinksEls.length; i++) {
       this.projectLinksEls[i].className = "project-links__el";
-      this.projectLinksEls[this.state.currentProject.id].classList.add(`project-links__el--is-active`);
     }
+
+    const linksContainer = this.projectLinksEls[currentProject.id];
+    const links = linksContainer.getElementsByClassName('project-links__el-link');
+
+    linksContainer.classList.add(`project-links__el--is-active`);
+
+    this.tl.clear();
+    this.tl.kill();
+
+    this.tl
+      .staggerFromTo(links, 0.4, {x: -10, opacity: 0}, {x: 0, opacity: 1, ease: Expo.easeOut, delay: 0.3}, 0.3);
+
   }
 
   render({}, {projects, currentProject}) {

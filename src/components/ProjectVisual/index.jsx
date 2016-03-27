@@ -48,7 +48,7 @@ class ProjectVisual extends Component {
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
-  onProjectChange(currentProject) {
+  onProjectChange({currentProject}) {
     this.setState({ currentProject });
 
     for (let i = 0; i < this.visualEls.length; i++) {

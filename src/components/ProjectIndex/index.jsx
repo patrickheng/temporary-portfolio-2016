@@ -45,8 +45,8 @@ class ProjectTags extends Component {
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
-  onProjectChange(currentProject) {
-    this.setState({ currentProject });
+  onProjectChange({currentProject}) {
+    this.setState({currentProject});
   }
 
   render(props, {projects, currentProject}) {

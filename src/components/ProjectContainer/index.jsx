@@ -116,12 +116,18 @@ class Application extends Component {
 
   previousProject() {
     States.currentProjectIndex = (States.currentProjectIndex > 0) ? States.currentProjectIndex - 1 : States.projectsNb - 1;
-    Emitter.emit(PROJECT_CHANGE, States.projects[States.currentProjectIndex]);
+    Emitter.emit(PROJECT_CHANGE, {
+      currentProject: States.projects[States.currentProjectIndex],
+      direction: -1
+    });
   }
 
   nextProject() {
     States.currentProjectIndex = (States.currentProjectIndex < States.projectsNb - 1) ? States.currentProjectIndex + 1 : 0;
-    Emitter.emit(PROJECT_CHANGE, States.projects[States.currentProjectIndex]);
+    Emitter.emit(PROJECT_CHANGE, {
+      currentProject: States.projects[States.currentProjectIndex],
+      direction: 1
+    });
   }
 
   render(props, state) {

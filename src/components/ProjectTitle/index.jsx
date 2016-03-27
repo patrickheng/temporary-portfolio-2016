@@ -26,6 +26,12 @@ class ProjectTitle extends Component {
 
     this.addListerners();
 
+    this.titleEls = this.base.getElementsByClassName('project-title__el');
+    this.titleEls[0].classList.add('project-title__el--is-active');
+
+    this.oldProject = this.state.currentProject;
+
+    this.tl = new TimelineMax();
   }
 
   componentWillUpdate() {
@@ -41,7 +47,7 @@ class ProjectTitle extends Component {
   }
 
   bind() {
-
+    this.onProjectChange = this.onProjectChange.bind(this);
   }
 
   addListerners() {
@@ -52,8 +58,33 @@ class ProjectTitle extends Component {
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
-  onProjectChange() {
-    // TweenMax.to()
+  onProjectChange({currentProject, direction}) {
+
+    const prevEl= this.titleEls[this.oldProject.id];
+    const nextEl = this.titleEls[currentProject.id];
+
+    for (let i = 0; i < this.titleEls.length; i++) {
+      this.titleEls[i].classList.remove('project-title__el--is-active');
+      this.titleEls[i].classList.remove('project-title__el--is-previous');
+    }
+
+    this.tl.clear();
+    this.tl.kill();
+
+    nextEl.classList.add('project-title__el--is-active');
+    prevEl.classList.add('project-title__el--is-previous');
+
+    if(direction === -1) {
+      this.tl
+        .fromTo(prevEl, 0.7, {y: '0%'}, {y: '150%', ease: Expo.easeOut})
+        .fromTo(nextEl, 0.7, {y: '-150%'}, {y: '0%', ease: Expo.easeOut}, 0.3);
+    } else {
+      this.tl
+        .fromTo(prevEl, 1, {y: '0%'}, {y: '-150%', ease: Expo.easeOut})
+        .fromTo(nextEl, 1, {y: '150%'}, {y: '0%', ease: Expo.easeOut}, 0.4);
+    }
+
+    this.oldProject = currentProject;
   }
 
   render({}, {projects}) {

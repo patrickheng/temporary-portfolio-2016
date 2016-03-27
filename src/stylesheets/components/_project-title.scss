@@ -1,16 +1,29 @@
 .project-title {
   position: absolute;
+  width: 250px;
   top: 16.05%;
   right: 100%;
   margin-right: 3.5rem;
+  overflow: hidden;
+  height: 45px;
   .project-title__el {
+    top: 0;
     font-size: 4rem;
     text-align: right;
     display: none;
     color: $color-red;
     font-weight: bold;
-    &:first-child {
+    white-space: nowrap;
+
+    &--is-active {
       display: block;
+    }
+
+    &--is-previous {
+      display: block;
+      position: absolute;
+      top :0;
+      right: 0;
     }
   }
 }
@@ -29,6 +42,13 @@
     top: -5.5rem;
     left: -0.1rem;
     right: auto;
+    .project-title__el {
+      text-align: left;
+      &--is-previous {
+        left: 0;
+        right: auto;
+      }
+    }
   }
 }
 
@@ -40,7 +60,7 @@
 
 @media only screen and (max-width: 736px) and (orientation: portrait) {
   .project-title {
-    position: static;
+    position: relative;
     top: auto;
     left: auto;
     margin: 0 0 1rem 0;

@@ -52,7 +52,7 @@ class ProjectLetters extends Component {
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
-  onProjectChange(currentProject) {
+  onProjectChange({currentProject}) {
     this.setState({ currentProject });
     this.base.className = "project-letters";
     this.base.classList.add(`project-letters--${this.state.currentProject.ref}`);
