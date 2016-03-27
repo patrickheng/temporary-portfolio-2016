@@ -26,6 +26,8 @@ class ProjectLinks extends Component {
   componentDidMount() {
 
     this.addListerners();
+    this.projectLinksEls = this.base.getElementsByClassName('project-links__el');
+    this.projectLinksEls[0].classList.add(`project-links__el--is-active`);
   }
 
   componentWillUnmount() {
@@ -47,6 +49,11 @@ class ProjectLinks extends Component {
 
   onProjectChange(currentProject) {
     this.setState({ currentProject });
+
+    for (let i = 0; i < this.projectLinksEls.length; i++) {
+      this.projectLinksEls[i].className = "project-links__el";
+      this.projectLinksEls[this.state.currentProject.id].classList.add(`project-links__el--is-active`);
+    }
   }
 
   render({}, {projects, currentProject}) {
@@ -60,20 +67,20 @@ class ProjectLinks extends Component {
       if(projects[i].links.site && projects[i].links.repository) {
         link = (
           <div class="project-links__el">
-              <a class="project-links__el-link" src={projects[i].links.site} target="_blank">View website</a>
-              <a class="project-links__el-link" src={projects[i].links.repository} target="_blank">View it on Github</a>
+              <a class="project-links__el-link" href={projects[i].links.site} target="_blank">View website</a>
+              <a class="project-links__el-link" href={projects[i].links.repository} target="_blank">View it on Github</a>
           </div>
         );
       } else if(projects[i].links.site) {
         link = (
           <div class="project-links__el">
-              <a class="project-links__el-link" src={projects[i].links.site} target="_blank">View website</a>
+              <a class="project-links__el-link" href={projects[i].links.site} target="_blank">View website</a>
           </div>
         );
       } else {
         link = (
           <div class="project-links__el">
-              <a class="project-links__el-link" src={projects[i].links.repository} target="_blank">View it on Github</a>
+              <a class="project-links__el-link" href={projects[i].links.repository} target="_blank">View it on Github</a>
           </div>
         );
       }

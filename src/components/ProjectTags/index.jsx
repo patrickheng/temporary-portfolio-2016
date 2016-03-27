@@ -10,6 +10,7 @@ import {
 class ProjectTags extends Component {
 
   state = {
+    projects: States.projects,
     currentProject: States.projects[0]
   }
 
@@ -26,7 +27,9 @@ class ProjectTags extends Component {
 
     this.addListerners();
 
-    this.base.classList.add(`project-tags--${this.state.currentProject.ref}`);
+    this.projectEls = this.base.getElementsByClassName('projects-tags__project-el');
+    this.projectEls[0].classList.add(`projects-tags__project-el--is-active`);
+
   }
 
   componentWillUnmount() {
@@ -39,25 +42,50 @@ class ProjectTags extends Component {
   }
 
   addListerners() {
+
     Emitter.on(PROJECT_CHANGE, this.onProjectChange);
   }
 
   removeListerners() {
+
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
   onProjectChange(currentProject) {
+
     this.setState({ currentProject });
-    this.base.className = "project-tags";
-    this.base.classList.add(`project-tags--${this.state.currentProject.ref}`);
+
+    for (let i = 0; i < this.projectEls.length; i++) {
+      this.projectEls[i].className = "projects-tags__project-el";
+      this.projectEls[this.state.currentProject.id].classList.add(`projects-tags__project-el--is-active`);
+    }
   }
 
-  render(props, state) {
+  render({}, {projects}) {
+
+    let content = projects.map((project, i)=>{
+
+      const tags = project.tags.map((tag, i)=>{
+        return (
+          <li class="project-tags__tag-el">
+              {tag}
+          </li>
+        );
+      });
+
+      return (
+        <li class="projects-tags__project-el">
+          <ul class="projects-tags__tag-list">
+            {tags}
+          </ul>
+        </li>
+      )
+    });
 
     return (
       <div class="project-tags">
-        <ul class="projects-tags__list">
-          <li class="projects-tags__el"></li>
+        <ul class="projects-tags__project-list">
+          {content}
         </ul>
       </div>
     );

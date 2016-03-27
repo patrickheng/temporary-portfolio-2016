@@ -5,8 +5,8 @@ export default [
     name: 'Codevember',
     letters: 'code',
     role: 'Creative developer',
-    description: 'One creative experiments made everyday during 15 days.',
-    tags: ['creativeCoding', 'canvas', 'threeJs', 'pixiJs'],
+    description: 'A coding challenge, I made one creative experiments everyday during 15 days.',
+    tags: ['canvas', 'threeJs', 'pixiJs'],
     links: {
       site: 'http://codepen.io/pat_hg/pens/public/',
       repository: false
@@ -19,7 +19,7 @@ export default [
     name: "Mastro",
     role: 'Creative developer',
     description: 'Portfolio of a talented UI/UX designer based in Paris.',
-    tags: ['vueJs', 'pixiJs', 'GSAP'],
+    tags: ['vueJs', 'pixiJs', 'tweenmax'],
     links: {
       site: 'http://robinmastromarino.com/',
       repository: false
@@ -45,7 +45,7 @@ export default [
     letters : 'tdn',
     role: 'Front-end / Back-end developer',
     description: 'Discover the professions present in web agencies in a fun and educational way with talents du numerique.',
-    tags: ['angularJs', 'wordpressApi'],
+    tags: ['angularJs', 'wordpressApi', 'tweenmax'],
     links: {
       site: 'http://agence.talentsdunumerique.com/',
       repository: false
@@ -57,7 +57,7 @@ export default [
     name: 'Lux Operon',
     letters: 'lux',
     role: 'Creative developer',
-    description: 'Discover the abyss through an immersive 3d experience.',
+    description: 'Project in progress made at Gobelins school. Discover the abyss through an immersive webgl experience.',
     tags: ['reactJs', 'threeJs', 'glsl', 'gobelins'],
     links: {
       site: false,

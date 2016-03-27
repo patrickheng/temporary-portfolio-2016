@@ -1,8 +1,31 @@
 .project-tags {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+
   .project-tags__list {
 
   }
-  .project-tags__el {
+  .projects-tags__project-el {
+    display: none;
+    &--is-active {
+      display: block;
+    }
+  }
+  .projects-tags__tag-list {
 
+  }
+
+  .project-tags__tag-el {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: $color-grey-medium;
+    margin-right: 2.5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:before {
+      content: '#';
+    }
   }
 }

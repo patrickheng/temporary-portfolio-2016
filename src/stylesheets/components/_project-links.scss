@@ -1,0 +1,8 @@
+.project-links {
+  .project-links__el {
+    display: none;
+    &--is-active {
+      display: block;
+    }
+  }
+}
