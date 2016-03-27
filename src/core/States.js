@@ -6,12 +6,14 @@ class States {
 
   constructor() {
 
-    this.projects = projects;
     this.userAgent = window.navigator.userAgent;
     this.mobileDetect = new MobileDetect(this.userAgent);
     this.deviceType = this.getDeviceType();
     this.browserName = browser.name;
-    this.currentProject = projects[0];
+
+    this.projects = projects;
+    this.currentProjectIndex = 0;
+    this.projectsNb = this.projects.length;
   }
 
   getDeviceType() {
