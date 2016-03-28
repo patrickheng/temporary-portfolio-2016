@@ -58,7 +58,7 @@ class ProjectTags extends Component {
   }
 
   enterAnimation() {
-    const tagsContainerActive = this.projectEls[this.state.currentProject.id];
+    const tagsContainerActive = this.projectEls[0];
     const tags = tagsContainerActive.getElementsByClassName('project-tags__tag-el');
 
     this.tl
@@ -69,7 +69,7 @@ class ProjectTags extends Component {
 
     // this.setState({ currentProject });
 
-    const tagsContainerActive = this.projectEls[this.state.currentProject.id];
+    const tagsContainerActive = this.projectEls[currentProject.id];
     const tags = tagsContainerActive.getElementsByClassName('project-tags__tag-el');
 
     for (let i = 0; i < this.projectEls.length; i++) {

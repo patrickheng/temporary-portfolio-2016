@@ -58,7 +58,7 @@ export default [
     letters: 'lux',
     role: 'Creative developer',
     description: 'Project in progress made at Gobelins school. Discover the abyss through an immersive webgl experience.',
-    tags: ['reactJs', 'threeJs', 'glsl', 'gobelins'],
+    tags: ['reactJs', 'threeJs', 'glsl', 'wip'],
     links: {
       site: false,
       repository: 'https://github.com/SubmarineInteractive/Lux-Operon'
