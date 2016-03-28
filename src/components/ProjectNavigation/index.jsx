@@ -27,8 +27,6 @@ class ProjectNavigation extends Component {
 
     this.addListerners();
 
-    this.base.classList.add(`project-navigation--${this.state.currentProject.ref}`);
-
     this.els = this.base.querySelectorAll('.project-navigation__el');
     this.prevEl = this.base.querySelector('.project-navigation__el--previous');
     this.nextEl = this.base.querySelector('.project-navigation__el--next');
@@ -54,7 +52,6 @@ class ProjectNavigation extends Component {
   onProjectChange({currentProject, direction}) {
     this.setState({ currentProject });
     this.base.className = "project-navigation";
-    this.base.classList.add(`project-navigation--${this.state.currentProject.ref}`);
 
     if(direction < 0) {
       this.prevEl.classList.add('project-navigation__el--feedback');
