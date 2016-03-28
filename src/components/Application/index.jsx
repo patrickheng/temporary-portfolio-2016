@@ -75,9 +75,11 @@ class Application extends Component {
       <div class="application">
         <Header />
         <About />
-        <ProjectNavigation />
-        <ProjectContainer />
-        <SocialNetworks />
+        <div class="wrapper">
+          <ProjectNavigation />
+          <ProjectContainer />
+          <SocialNetworks />
+        </div>
       </div>
     );
   }

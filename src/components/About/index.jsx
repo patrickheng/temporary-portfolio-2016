@@ -24,6 +24,11 @@ class About extends Component {
   componentDidMount() {
 
     this.addListerners();
+
+    setTimeout(()=>{
+      this.generateTimelineMax();
+    }, 1000);
+
   }
 
   componentWillUnmount() {
@@ -48,11 +53,33 @@ class About extends Component {
     Emitter.off(ABOUT_CLOSE, this.onClose);
   }
 
+  generateTimelineMax() {
+
+    this.appWrapper = document.querySelector('.wrapper');
+
+    this.tl = new TimelineMax({
+      paused: true,
+      onReverseComplete: () =>{
+        Emitter.emit(ABOUT_CLOSE);
+      }
+    });
+
+    this.tl
+      .to(this.base, 1, {x: '0%', ease: Expo.easeOut})
+      .to(this.appWrapper, 1, {left: -400, ease: Expo.easeOut}, 0);
+
+  }
+
   onOpen() {
+    this.setState({isOpen: true});
+
+    this.tl.play(0);
   }
 
   onClose() {
+    this.setState({isOpen: false});
 
+    this.tl.reverse();
   }
 
   onKeyUpEscapeKey(ev) {
