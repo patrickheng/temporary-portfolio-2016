@@ -31,7 +31,7 @@ export default [
     name: 'Dragand',
     letters: 'dragand',
     role: 'Co-creator / Js developer',
-    description: 'Desktop application that allows you to get your favorite subtitles by drag and droping your file in the app.',
+    description: 'Desktop application that allows you to get your favorite subtitles by dragging and dropping your file in the app.',
     tags: ['angularJs', 'nodeWebkit', 'producthunt'],
     links: {
       site: 'http://dragand.watch/',

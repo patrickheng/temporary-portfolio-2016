@@ -110,7 +110,7 @@ class About extends Component {
           <p class="about__paragraph">
             Hi,
             <br/><br/>
-            I’m living near Paris and I am a creative front-end developer of 23 years old. What interests me the most is canvas and webgl experiments and UI animations.
+            I live near Paris and I am a 23 years old creative front-end developer. What interests me the most is canvas and webgl experiments and UI animations.
             <br/><br/>
             I studied in third year at <a class="link link--light" href="http://www.hetic.net/" target="_blank">HETIC</a> and I'm currently studying at <a class="link link--light" href="http://www.gobelins.fr/" target="_blank">Gobelins Paris</a> in the interactive design formation.
             <br/><br/>
