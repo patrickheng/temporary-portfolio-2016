@@ -70,7 +70,7 @@ class ProjectTags extends Component {
     this.tl.kill();
 
     this.tl
-      .staggerFromTo(tags, 0.3, {opacity: 0, y: 5}, {opacity: 1, y: 0, ease: Back.easeOut, delay: 0.1}, 0.2);
+      .staggerFromTo(tags, 0.9, {opacity: 0, y: 5}, {opacity: 1, y: 0, ease: Expo.easeOut, delay: 0.1}, 0.2);
   }
 
   render({}, {projects}) {
