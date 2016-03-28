@@ -1,6 +1,7 @@
 # Ignore some folders
 dist
 doc
+src/vendors
 
 # Ignore config stuff
 server.*.js

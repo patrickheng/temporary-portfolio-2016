@@ -2,6 +2,7 @@ import 'stylesheets/main.scss';
 
 import { h, render, Component } from 'preact';
 import 'gsap';
+// import 'vendors/MorphSVGPlugin';
 
 import domready from 'domready';
 import FastClick from 'fastclick';

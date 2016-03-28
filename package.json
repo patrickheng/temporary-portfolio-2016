@@ -41,6 +41,7 @@
     "performance-now": "^0.2.0",
     "pixi.js": "^3.0.10",
     "preact": "^4.5.1",
+    "preact-svg": "^1.4.3",
     "raf": "^3.2.0"
   },
   "devDependencies": {

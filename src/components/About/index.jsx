@@ -70,7 +70,7 @@ class About extends Component {
 
     this.tl
       .to(this.content, 1, {x: '0%', ease: Power4.easeOut})
-      .to(this.appWrapper, 1, {x: -400, scale: 0.8, ease: Power4.easeOut}, 0)
+      .to(this.appWrapper, 1, {x: -200, ease: Power4.easeOut}, 0)
       .to(this.overlay, 0.5, {opacity: 1}, 0.2);
 
   }

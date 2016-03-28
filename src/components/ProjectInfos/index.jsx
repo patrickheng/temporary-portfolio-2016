@@ -4,6 +4,7 @@ import Emitter from 'core/Emitter';
 import States from 'core/States';
 
 import {
+  SPLASHSCREEN_HIDE,
   PROJECT_CHANGE
 } from 'config/messages';
 
@@ -30,7 +31,7 @@ class ProjectLetters extends Component {
     this.addListerners();
 
     this.projectInfoEls = this.base.getElementsByClassName('project-infos__el');
-    this.projectInfoEls[this.state.currentProject.id].classList.add(`project-infos__el--is-active`);
+    this.projectInfoEls[0].classList.add(`project-infos__el--is-active`);
 
     this.transitionBlock = this.base.querySelector('.project-infos__transition-block');
   }
@@ -41,15 +42,24 @@ class ProjectLetters extends Component {
   }
 
   bind() {
+    this.enterAnimation = this.enterAnimation.bind(this);
     this.onProjectChange = this.onProjectChange.bind(this);
   }
 
   addListerners() {
+    Emitter.on(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.on(PROJECT_CHANGE, this.onProjectChange);
   }
 
   removeListerners() {
+    Emitter.off(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
+  }
+
+  enterAnimation() {
+    this.tl
+      .set(this.transitionBlock, {scaleX: 1, transformOrigin: 'right'})
+      .to(this.transitionBlock, 0.5, {scaleX: 0, ease: Expo.easeOut})
   }
 
   onProjectChange({currentProject, direction}) {
@@ -75,7 +85,7 @@ class ProjectLetters extends Component {
 
     this.tl
       .set(this.transitionBlock, {transformOrigin: config.startOrigin})
-      .to(this.transitionBlock, 0.5, {scaleX: 1, ease: Back.easeOut.config(0.9)})
+      .to(this.transitionBlock, 0.5, {scaleX: 1, ease: Back.easeOut.config(0.7)})
       .addCallback(()=>{
         for (let i = 0; i < this.projectInfoEls.length; i++) {
           this.projectInfoEls[i].className = "project-infos__el";
@@ -83,7 +93,7 @@ class ProjectLetters extends Component {
         activeInfo.classList.add(`project-infos__el--is-active`);
       })
       .set(this.transitionBlock, {transformOrigin: config.endOrigin})
-      .to(this.transitionBlock, 0.5, {scaleX: 0, ease: Back.easeOut.config(0.9)})
+      .to(this.transitionBlock, 0.5, {scaleX: 0, ease: Expo.easeOut})
   }
 
   render({}, {projects}) {
