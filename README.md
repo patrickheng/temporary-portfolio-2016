@@ -1,7 +1,7 @@
 # Patrick Heng - Temporary portfolio 2016
 
-Here is my temporary portfolio awaiting the big one.
-Special thanks to [Robin Mastromarino](https://robinmastromarino.com) for the design.
+Here is my temporary portfolio awaiting the big one. [View website](http://hengpatrick.fr)
+Special thanks to [Robin Mastromarino](http://robinmastromarino.com) for the design.
 
 ![Preview](http://hengpatrick.fr/images/share/share.jpg)
 
