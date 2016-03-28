@@ -35,6 +35,9 @@
         .project-navigation__el-line {
           transform: translateX(-20px) !important;
         }
+        .project-navigation__el-icon {
+          transform: translateX(-5px) !important;
+        }
       }
     }
 
@@ -62,6 +65,9 @@
       &.project-navigation__el--feedback {
         .project-navigation__el-line {
           transform: translateX(20px) !important;
+        }
+        .project-navigation__el-icon {
+          transform: translateX(5px) !important;
         }
       }
     }
@@ -107,7 +113,7 @@
     top: 0;
     font-size: 2.5rem;
     padding: 1rem;
-    transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out, transform 0.3s ease-out;
     .desktop-device &:hover {
       color: $color-red;
     }
