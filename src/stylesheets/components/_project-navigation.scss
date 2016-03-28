@@ -8,6 +8,7 @@
     padding: 2rem 0;
     z-index: 3;
     width: calc( 10% + 7rem);
+    transition: opacity 1s ease-out;
 
     &--previous  {
       left: 0;
@@ -74,6 +75,10 @@
       .project-navigation__el-icon {
         color: $color-red;
       }
+    }
+
+    .application--about-open & {
+      // opacity: 0;
     }
   }
 

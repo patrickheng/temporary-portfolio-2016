@@ -14,8 +14,8 @@ import ProjectLinks from 'components/ProjectLinks';
 
 import {
   PROJECT_CHANGE,
-  ABOUT_OPEN,
-  ABOUT_CLOSE
+  ABOUT_AFTER_OPEN,
+  ABOUT_AFTER_CLOSE
 } from 'config/messages';
 
 class Application extends Component {
@@ -35,6 +35,8 @@ class Application extends Component {
     this.bind();
 
     this.addListerners();
+
+    this.wrapperEl = document.querySelector('.wrapper');
   }
 
   componentWillUnmount() {
@@ -46,12 +48,13 @@ class Application extends Component {
 
     this.onKeyUp = this.onKeyUp.bind(this);
     this.onWheel = this.onWheel.bind(this);
+    this.afterAboutOpen = this.afterAboutOpen.bind(this);
+    this.afterAboutClose = this.afterAboutClose.bind(this);
     this.addListerners = this.addListerners.bind(this);
     this.removeListerners = this.removeListerners.bind(this);
   }
 
   addListerners() {
-
     document.addEventListener('keyup', this.onKeyUp, false);
 
     if(States.browserName === "firefox") {
@@ -69,8 +72,8 @@ class Application extends Component {
     this.managerHomepage.on('swipeleft', this.nextProject);
     this.managerHomepage.on('swiperight', this.previousProject);
 
-    Emitter.on(ABOUT_OPEN, this.removeListerners);
-    Emitter.on(ABOUT_CLOSE, this.addListerners);
+    Emitter.on(ABOUT_AFTER_OPEN, this.afterAboutOpen);
+    Emitter.on(ABOUT_AFTER_CLOSE, this.afterAboutClose);
   }
 
   removeListerners() {
@@ -86,6 +89,9 @@ class Application extends Component {
 
     this.managerHomepage.off('swipeleft', this.nextProject);
     this.managerHomepage.off('swiperight', this.previousProject);
+
+    Emitter.off(ABOUT_AFTER_OPEN, this.addListerners);
+    Emitter.off(ABOUT_AFTER_CLOSE, this.removeListerners);
   }
 
   onKeyUp(ev) {
@@ -139,6 +145,18 @@ class Application extends Component {
       currentProject: States.projects[States.currentProjectIndex],
       direction: 1
     });
+  }
+
+  afterAboutOpen() {
+    this.removeListerners();
+
+    this.wrapperEl = document.querySelector('.application');
+    this.wrapperEl.classList.add('application--about-open');
+  }
+
+  afterAboutClose() {
+    this.addListerners();
+    this.wrapperEl.classList.remove('application--about-open');
   }
 
   render(props, state) {

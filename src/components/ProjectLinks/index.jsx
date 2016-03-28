@@ -4,6 +4,7 @@ import Emitter from 'core/Emitter';
 import States from 'core/States';
 
 import {
+  SPLASHSCREEN_HIDE,
   PROJECT_CHANGE
 } from 'config/messages';
 
@@ -38,15 +39,25 @@ class ProjectLinks extends Component {
   }
 
   bind() {
+    this.enterAnimation = this.enterAnimation.bind(this);
     this.onProjectChange = this.onProjectChange.bind(this);
   }
 
   addListerners() {
+    Emitter.on(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.on(PROJECT_CHANGE, this.onProjectChange);
   }
 
   removeListerners() {
+    Emitter.on(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
+  }
+
+  enterAnimation() {
+    const linksContainer = this.projectLinksEls[0];
+    const links = linksContainer.getElementsByClassName('project-links__el-link');
+
+    TweenMax.from(links, 1, {x: -10, opacity: 0.9, ease: Expo.easeOut});
   }
 
   onProjectChange({currentProject}) {
@@ -79,20 +90,20 @@ class ProjectLinks extends Component {
       if(projects[i].links.site && projects[i].links.repository) {
         link = (
           <div class="project-links__el">
-              <a class="project-links__el-link" href={projects[i].links.site} target="_blank">View website</a>
-              <a class="project-links__el-link" href={projects[i].links.repository} target="_blank">View it on Github</a>
+              <a class="project-links__el-link link" href={projects[i].links.site} target="_blank">View website</a>
+              <a class="project-links__el-link link" href={projects[i].links.repository} target="_blank">View it on Github</a>
           </div>
         );
       } else if(projects[i].links.site) {
         link = (
           <div class="project-links__el">
-              <a class="project-links__el-link" href={projects[i].links.site} target="_blank">View website</a>
+              <a class="project-links__el-link link" href={projects[i].links.site} target="_blank">View website</a>
           </div>
         );
       } else {
         link = (
           <div class="project-links__el">
-              <a class="project-links__el-link" href={projects[i].links.repository} target="_blank">View it on Github</a>
+              <a class="project-links__el-link link" href={projects[i].links.repository} target="_blank">View it on Github</a>
           </div>
         );
       }

@@ -1,0 +1,36 @@
+@keyframes underline {
+	0% {
+		left: -4%;
+		transform: scaleX(0);
+		opacity: 0;
+	}
+
+	25% {
+		left: 29%;
+		transform: scaleX(1);
+		opacity: 0.6;
+	}
+
+	75% {
+		left: 100%;
+		transform: scaleX(0);
+		opacity: 0;
+	}
+
+	100% {
+		left: 100%;
+		transform: scaleX(0);
+		opacity: 0;
+	}
+}
+
+@keyframes fade-in {
+	from, 30% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}

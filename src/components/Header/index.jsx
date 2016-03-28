@@ -24,7 +24,7 @@ class Header extends Component {
       <header class="header">
         <h1 class="header__logo">Patrick Heng</h1>
         <strong class="header__logo-subtitle">creative developer</strong>
-        <button class="header__about" onClick={this.openAbout}>About Me</button>
+        <button class="header__about" onClick={this.openAbout}>About</button>
       </header>
     );
   }

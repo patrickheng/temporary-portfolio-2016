@@ -28,11 +28,32 @@
   right: $size-border-padding-x;
   font-size: 1.4rem;
   font-weight: 500;
-  transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out, opacity 0.3s 1.1s ease-out;
   cursor: pointer;
+  z-index: 5;
+
+  &:after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 10px;
+    height: 1px;
+    content: '';
+    opacity: 0.5;
+    background: $color-red;
+  }
 
   .desktop-device &:hover {
     color: $color-red;
+    &:after {
+      display: block;
+      animation: underline 2.6s linear infinite;
+    }
+  }
+
+  .application--about-open & {
+    opacity: 0;
   }
 }
 

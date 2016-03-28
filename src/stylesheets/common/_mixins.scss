@@ -14,6 +14,29 @@
   left: 0;
 }
 
+@mixin custom-scrollbar {
+	scrollbar-3dlight-color: $color-black;
+	scrollbar-arrow-color: $color-white;
+	scrollbar-base-color: $color-black;
+	scrollbar-dark-shadow-color: $color-black;
+	scrollbar-highlight-color: $color-black;
+	scrollbar-shadow-color: $color-black;
+	scrollbar-track-color: $color-red;
+
+	&::-webkit-scrollbar-track {
+		background-color: $color-black;
+	}
+
+	&::-webkit-scrollbar {
+		width: 6px;
+		background-color: $color-black;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $color-red;
+	}
+}
+
 @mixin centerX {
   position: absolute;
   left: 50%;
