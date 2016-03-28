@@ -4,7 +4,8 @@ import Emitter from 'core/Emitter';
 import States from 'core/States';
 
 import {
-  PROJECT_CHANGE
+  PROJECT_CHANGE,
+  SPLASHSCREEN_HIDE
 } from 'config/messages';
 
 class ProjectVisual extends Component {
@@ -38,15 +39,22 @@ class ProjectVisual extends Component {
   }
 
   bind() {
+    this.enterAnimation = this.enterAnimation.bind(this);
     this.onProjectChange = this.onProjectChange.bind(this);
   }
 
   addListerners() {
+    Emitter.on(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.on(PROJECT_CHANGE, this.onProjectChange);
   }
 
   removeListerners() {
+    Emitter.off(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
+  }
+
+  enterAnimation() {
+    TweenMax.from(this.base, 1.6, {scale: 0.9, ease: Power2.easeOut}, 1);
   }
 
   onProjectChange({currentProject, direction}) {
@@ -73,7 +81,7 @@ class ProjectVisual extends Component {
     let projectVisuals = [];
 
     for (let i = 0; i < projects.length; i++) {
-      const imgPath = `/images/${projects[i].ref}.jpg`
+      const imgPath = `/images/projects/${projects[i].ref}.jpg`
       projectVisuals.push(<img class="project-visual__el" src={imgPath} />)
     }
 

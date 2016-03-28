@@ -4,7 +4,8 @@ import Emitter from 'core/Emitter';
 import States from 'core/States';
 
 import {
-  PROJECT_CHANGE
+  PROJECT_CHANGE,
+  SPLASHSCREEN_HIDE
 } from 'config/messages';
 
 class ProjectTags extends Component {
@@ -40,17 +41,28 @@ class ProjectTags extends Component {
   }
 
   bind() {
+    this.enterAnimation = this.enterAnimation.bind(this);
     this.onProjectChange = this.onProjectChange.bind(this);
   }
 
   addListerners() {
 
+    Emitter.on(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.on(PROJECT_CHANGE, this.onProjectChange);
   }
 
   removeListerners() {
 
+    Emitter.off(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
+  }
+
+  enterAnimation() {
+    const tagsContainerActive = this.projectEls[this.state.currentProject.id];
+    const tags = tagsContainerActive.getElementsByClassName('project-tags__tag-el');
+
+    this.tl
+      .staggerFromTo(tags, 0.9, {opacity: 0, y: 5}, {opacity: 1, y: 0, ease: Expo.easeOut, delay: 0.1}, 0.2);
   }
 
   onProjectChange({currentProject}) {

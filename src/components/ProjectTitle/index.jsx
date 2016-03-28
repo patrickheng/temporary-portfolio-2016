@@ -5,7 +5,8 @@ import Emitter from 'core/Emitter';
 import States from 'core/States';
 
 import {
-  PROJECT_CHANGE
+  PROJECT_CHANGE,
+  SPLASHSCREEN_HIDE
 } from 'config/messages';
 
 class ProjectTitle extends Component {
@@ -47,15 +48,22 @@ class ProjectTitle extends Component {
   }
 
   bind() {
+    this.enterAnimation = this.enterAnimation.bind(this);
     this.onProjectChange = this.onProjectChange.bind(this);
   }
 
   addListerners() {
+    Emitter.on(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.on(PROJECT_CHANGE, this.onProjectChange);
   }
 
   removeListerners() {
+    Emitter.off(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
+  }
+
+  enterAnimation() {
+    TweenMax.fromTo(this.titleEls[0], 1, {y: '150%', opacity: 0}, {y: '0%', opacity: 1, delay: 0.4, ease: Expo.easeOut})
   }
 
   onProjectChange({currentProject, direction}) {

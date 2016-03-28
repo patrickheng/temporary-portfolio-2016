@@ -9,6 +9,12 @@ const messages = {
   WINDOW_RESIZE: 'WINDOW_RESIZE',
 
   /*
+   * SPLASHSCREEN
+   */
+
+  SPLASHSCREEN_HIDE: 'SPLASHSCREEN_HIDE',
+
+  /*
    * PROJECT
    */
 

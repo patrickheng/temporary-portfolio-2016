@@ -4,7 +4,8 @@ import Emitter from 'core/Emitter';
 import States from 'core/States';
 
 import {
-  PROJECT_CHANGE
+  PROJECT_CHANGE,
+  SPLASHSCREEN_HIDE
 } from 'config/messages';
 
 class ProjectTags extends Component {
@@ -26,6 +27,8 @@ class ProjectTags extends Component {
   componentDidMount() {
 
     this.addListerners();
+
+    this.line = this.base.querySelector('.project-index__line');
   }
 
   componentWillUnmount() {
@@ -34,15 +37,22 @@ class ProjectTags extends Component {
   }
 
   bind() {
+    this.enterAnimation = this.enterAnimation.bind(this);
     this.onProjectChange = this.onProjectChange.bind(this);
   }
 
   addListerners() {
     Emitter.on(PROJECT_CHANGE, this.onProjectChange);
+    Emitter.on(SPLASHSCREEN_HIDE, this.enterAnimation);
   }
 
   removeListerners() {
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
+    Emitter.off(SPLASHSCREEN_HIDE, this.enterAnimation);
+  }
+
+  enterAnimation() {
+    TweenMax.from(this.line, 0.7, {scaleY: 0, opacity: 0, ease: Back.easeOut.config(0.8)});
   }
 
   onProjectChange({currentProject}) {

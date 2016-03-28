@@ -3,8 +3,7 @@ import { h, Component } from 'preact';
 import Emitter from 'core/Emitter';
 
 import {
-  ABOUT_OPEN,
-  ABOUT_CLOSE
+  SPLASHSCREEN_HIDE
 } from 'config/messages';
 
 class Splashscreen extends Component {
@@ -47,7 +46,10 @@ class Splashscreen extends Component {
     });
 
     this.tl
-      .to(this.base, 6, {opacity: 0, ease: Expo.easeOut});
+      .addCallback(()=>{
+        Emitter.emit(SPLASHSCREEN_HIDE);
+      }, 0.9)
+      .to(this.base, 1, {opacity: 0, ease: Power2.easeOut});
   }
 
 

@@ -7,15 +7,21 @@
     height: 1.8rem;
     padding: 2rem 0;
     z-index: 3;
+    width: calc( 10% + 7rem);
+
     &--previous  {
       left: 0;
 
       .project-navigation__el-text {
-        left: 100%;
+        right: 0;
       }
 
       .project-navigation__el-icon {
         left: 3rem;
+      }
+
+      .project-navigation__el-line {
+        width: calc(100% - 8rem);
       }
 
       .desktop-device &:hover {
@@ -34,11 +40,16 @@
     &--next  {
       right: 0;
       .project-navigation__el-text {
-        right: 100%;
+        left: 0;
       }
 
       .project-navigation__el-icon {
         right: 3rem;
+      }
+
+      .project-navigation__el-line {
+        float : right;
+        width: calc(100% - 5.4rem);
       }
 
       .desktop-device &:hover {
@@ -70,7 +81,6 @@
     display: block;
     position: relative;
     top: 50%;
-    width: 9vw;
     height: 1px;
     background: $color-black;
     transition: background 0.2s ease-out, transform 0.2s ease-out;

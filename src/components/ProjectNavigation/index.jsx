@@ -4,7 +4,8 @@ import Emitter from 'core/Emitter';
 import States from 'core/States';
 
 import {
-  PROJECT_CHANGE
+  PROJECT_CHANGE,
+  SPLASHSCREEN_HIDE
 } from 'config/messages';
 
 class ProjectNavigation extends Component {
@@ -30,6 +31,7 @@ class ProjectNavigation extends Component {
     this.els = this.base.querySelectorAll('.project-navigation__el');
     this.prevEl = this.base.querySelector('.project-navigation__el--previous');
     this.nextEl = this.base.querySelector('.project-navigation__el--next');
+
   }
 
   componentWillUnmount() {
@@ -41,11 +43,17 @@ class ProjectNavigation extends Component {
     this.onProjectChange = this.onProjectChange.bind(this);
   }
 
+  enterAnimation() {
+    //TweenMax.from(this.base, 1.6, {scale: 0.9, ease: Power2.easeOut}, 1);
+  }
+
   addListerners() {
+    Emitter.on(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.on(PROJECT_CHANGE, this.onProjectChange);
   }
 
   removeListerners() {
+    Emitter.off(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
   }
 
