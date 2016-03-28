@@ -3,7 +3,7 @@
 Here is my temporary portfolio awaiting the big one.
 Special thanks to [Robin Mastromarino](https://robinmastromarino.com) for the design.
 
-![Preview](http://hengpatrick.fr/preview.gif)
+![Preview](http://hengpatrick.fr/images/share/share.jpg)
 
 #### TECHNOLOGIES
 
