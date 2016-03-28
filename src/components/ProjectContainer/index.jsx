@@ -69,8 +69,10 @@ class Application extends Component {
       ]
     });
 
-    this.managerHomepage.on('swipeleft', this.nextProject);
-    this.managerHomepage.on('swiperight', this.previousProject);
+    if(States.deviceType !== 'desktop') {
+      this.managerHomepage.on('swipeleft', this.nextProject);
+      this.managerHomepage.on('swiperight', this.previousProject);
+    }
 
     Emitter.on(ABOUT_AFTER_OPEN, this.afterAboutOpen);
     Emitter.on(ABOUT_AFTER_CLOSE, this.afterAboutClose);
@@ -87,9 +89,11 @@ class Application extends Component {
       document.removeEventListener('wheel', this.onWheel, false);
     }
 
-    this.managerHomepage.off('swipeleft', this.nextProject);
-    this.managerHomepage.off('swiperight', this.previousProject);
-
+    if(States.deviceType !== 'desktop') {
+      this.managerHomepage.off('swipeleft', this.nextProject);
+      this.managerHomepage.off('swiperight', this.previousProject);
+    }
+    
     Emitter.off(ABOUT_AFTER_OPEN, this.addListerners);
     Emitter.off(ABOUT_AFTER_CLOSE, this.removeListerners);
   }
