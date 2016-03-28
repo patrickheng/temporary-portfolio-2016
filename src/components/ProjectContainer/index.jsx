@@ -93,15 +93,15 @@ class Application extends Component {
       this.managerHomepage.off('swipeleft', this.nextProject);
       this.managerHomepage.off('swiperight', this.previousProject);
     }
-    
+
     Emitter.off(ABOUT_AFTER_OPEN, this.addListerners);
     Emitter.off(ABOUT_AFTER_CLOSE, this.removeListerners);
   }
 
   onKeyUp(ev) {
-    if(ev.keyCode === 39) {
+    if(ev.keyCode === 39 || ev.keyCode === 40 ) {
       this.nextProject();
-    } else if (ev.keyCode === 37) {
+    } else if (ev.keyCode === 37 || ev.keyCode === 38) {
       this.previousProject();
     }
   }

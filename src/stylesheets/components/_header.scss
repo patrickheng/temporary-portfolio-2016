@@ -8,6 +8,7 @@
   color: $color-white;
   padding: 0.8rem 1rem;
   transition: color 0.3s ease-out;
+  z-index: 1;
   &:hover {
     color: $color-red;
   }
@@ -20,6 +21,7 @@
   top: 8.5rem;
   position: absolute;
   left: $size-border-padding-x;
+  z-index: 1;
 }
 
 .header__about {

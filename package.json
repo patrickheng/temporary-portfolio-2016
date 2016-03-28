@@ -42,7 +42,8 @@
     "pixi.js": "^3.0.10",
     "preact": "^4.5.1",
     "preact-svg": "^1.4.3",
-    "raf": "^3.2.0"
+    "raf": "^3.2.0",
+    "simplex-noise": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",

@@ -1,17 +1,18 @@
-import SVG from 'preact-svg';
 import { h, Component } from 'preact';
 
+import States from 'core/States';
 import Emitter from 'core/Emitter';
+import Canvas from './Canvas';
 
 import {
   SPLASHSCREEN_HIDE,
-  PROJECT_CHANGE
+  PROJECT_CHANGE,
+  WINDOW_RESIZE
 } from 'config/messages';
 
 class Background extends Component {
   constructor() {
     super();
-
   }
 
   componentWillMount() {
@@ -21,8 +22,12 @@ class Background extends Component {
   componentDidMount() {
 
     this.addListerners();
-    this.slashLeft = this.base.querySelector('.background_el--left');
-    this.slashRight = this.base.querySelector('.background_el--right');
+
+    if(States.deviceType === 'desktop') {
+      this.canvas = this.base.querySelector('canvas');
+      this.canvas = new Canvas(this.canvas);
+    }
+
   }
 
   componentWillUnmount() {
@@ -33,24 +38,32 @@ class Background extends Component {
   bind() {
     this.enterAnimation = this.enterAnimation.bind(this);
     this.onProjectChange = this.onProjectChange.bind(this);
+    this.onWindowResize = this.onWindowResize.bind(this);
   }
 
   addListerners() {
     Emitter.on(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.on(PROJECT_CHANGE, this.onProjectChange);
+    Emitter.on(WINDOW_RESIZE, this.onWindowResize);
   }
 
   removeListerners() {
     Emitter.off(SPLASHSCREEN_HIDE, this.enterAnimation);
     Emitter.off(PROJECT_CHANGE, this.onProjectChange);
+    Emitter.off(WINDOW_RESIZE, this.onWindowResize);
   }
 
   onProjectChange({currentProject}) {
+    if(States.deviceType === 'desktop') {
+      this.canvas.restart();
+    }
+  }
+
+  onWindowResize() {
+    this.canvas.onWindowResize();
   }
 
   enterAnimation() {
-    TweenMax.from(this.slashLeft, 1, { x: "-10%", y: '100%', ease: Power2.easeOut});
-    TweenMax.from(this.slashRight, 1, { x: "10%",  y: '-100%', ease: Power2.easeOut});
   }
 
   onMouseMove(ev) {
@@ -61,14 +74,7 @@ class Background extends Component {
 
     return (
       <div class="background">
-        <SVG class="background_el background_el--left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-
-          <path class="background_path background_el--slash" d="M246.5 2.2l128.6 2.2L164.3 398H26"/>
-        </SVG>
-        <SVG class="background_el background_el--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-
-          <path class="background_path background_el--slash" d="M246.5 2.2l128.6 2.2L164.3 398H26"/>
-        </SVG>
+        <canvas class="background_canvas"></canvas>
       </div>
     );
   }

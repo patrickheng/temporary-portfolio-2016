@@ -18,7 +18,7 @@ export default [
     letters: 'mastro',
     name: "Mastro",
     role: 'Creative developer',
-    description: 'Portfolio of a talented UI/UX designer based in Paris.',
+    description: 'Portfolio of a UI/UX designer student at HETIC and based in Paris.',
     tags: ['vueJs', 'pixiJs', 'tweenmax'],
     links: {
       site: 'http://robinmastromarino.com/',

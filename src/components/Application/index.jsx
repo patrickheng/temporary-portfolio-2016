@@ -14,7 +14,7 @@ import ProjectNavigation from 'components/ProjectNavigation';
 import SocialNetworks from 'components/SocialNetworks';
 
 import {
-  WINDOW_RESIZE,
+  WINDOW_RESIZE
 } from 'config/messages';
 
 class Application extends Component {
