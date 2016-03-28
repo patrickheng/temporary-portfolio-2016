@@ -72,9 +72,10 @@ class ProjectLetters extends Component {
         endOrigin: 'left'
       }
     }
+
     this.tl
       .set(this.transitionBlock, {transformOrigin: config.startOrigin})
-      .to(this.transitionBlock, 0.5, {scaleX: 1, ease: Back.easeOut})
+      .to(this.transitionBlock, 0.5, {scaleX: 1, ease: Back.easeOut.config(0.9)})
       .addCallback(()=>{
         for (let i = 0; i < this.projectInfoEls.length; i++) {
           this.projectInfoEls[i].className = "project-infos__el";
@@ -82,7 +83,7 @@ class ProjectLetters extends Component {
         activeInfo.classList.add(`project-infos__el--is-active`);
       })
       .set(this.transitionBlock, {transformOrigin: config.endOrigin})
-      .to(this.transitionBlock, 0.5, {scaleX: 0, ease: Back.easeOut})
+      .to(this.transitionBlock, 0.5, {scaleX: 0, ease: Back.easeOut.config(0.9)})
   }
 
   render({}, {projects}) {
