@@ -6,6 +6,7 @@
   margin-right: 3.5rem;
   overflow: hidden;
   height: 45px;
+  z-index: 10;
   .project-title__el {
     top: 0;
     font-size: 4rem;
@@ -68,5 +69,12 @@
     .project-title__el {
       text-align: left;
     }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .project-title {
+    margin: 0;
+    height: 30px;
   }
 }
