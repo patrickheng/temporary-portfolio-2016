@@ -13,7 +13,9 @@ import ProjectTitle from 'components/ProjectTitle';
 import ProjectLinks from 'components/ProjectLinks';
 
 import {
-  PROJECT_CHANGE
+  PROJECT_CHANGE,
+  ABOUT_OPEN,
+  ABOUT_CLOSE
 } from 'config/messages';
 
 class Application extends Component {
@@ -44,6 +46,8 @@ class Application extends Component {
 
     this.onKeyUp = this.onKeyUp.bind(this);
     this.onWheel = this.onWheel.bind(this);
+    this.addListerners = this.addListerners.bind(this);
+    this.removeListerners = this.removeListerners.bind(this);
   }
 
   addListerners() {
@@ -64,17 +68,24 @@ class Application extends Component {
 
     this.managerHomepage.on('swipeleft', this.nextProject);
     this.managerHomepage.on('swiperight', this.previousProject);
+
+    Emitter.on(ABOUT_OPEN, this.removeListerners);
+    Emitter.on(ABOUT_CLOSE, this.addListerners);
   }
 
   removeListerners() {
 
     document.removeEventListener('keyup', this.onKeyUp, false);
 
-    if(States.browserName() === "firefox") {
+
+    if(States.browserName === "firefox") {
       document.removeEventListener('DOMMouseScroll', this.onWheel, false);
     } else {
       document.removeEventListener('wheel', this.onWheel, false);
     }
+
+    this.managerHomepage.off('swipeleft', this.nextProject);
+    this.managerHomepage.off('swiperight', this.previousProject);
   }
 
   onKeyUp(ev) {

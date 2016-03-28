@@ -6,6 +6,7 @@ import States from 'core/States';
 import Emitter from 'core/Emitter';
 
 import Header from 'components/Header';
+import About from 'components/About';
 import ProjectContainer from 'components/ProjectContainer';
 import ProjectNavigation from 'components/ProjectNavigation';
 // import ProjectLetters from 'components/ProjectLetters';
@@ -73,6 +74,7 @@ class Application extends Component {
     return (
       <div class="application">
         <Header />
+        <About />
         <ProjectNavigation />
         <ProjectContainer />
         <SocialNetworks />

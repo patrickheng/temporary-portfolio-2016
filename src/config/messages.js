@@ -12,7 +12,14 @@ const messages = {
    * PROJECT
    */
 
-  PROJECT_CHANGE: 'PROJECT_CHANGE'
+  PROJECT_CHANGE: 'PROJECT_CHANGE',
+
+  /*
+   * ABOUT
+   */
+
+  ABOUT_OPEN: 'ABOUT_OPEN',
+  ABOUT_CLOSE: 'ABOUT_CLOSE'
 
 };
 
