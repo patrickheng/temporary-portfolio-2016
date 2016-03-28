@@ -5,6 +5,7 @@ import debounce from 'lodash.debounce';
 import States from 'core/States';
 import Emitter from 'core/Emitter';
 
+import Splashscreen from 'components/Splashscreen';
 import Header from 'components/Header';
 import About from 'components/About';
 import ProjectContainer from 'components/ProjectContainer';
@@ -73,6 +74,7 @@ class Application extends Component {
 
     return (
       <div class="application">
+        <Splashscreen />
         <Header />
         <About />
         <div class="wrapper">

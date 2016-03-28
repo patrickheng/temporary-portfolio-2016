@@ -9,6 +9,7 @@
     z-index: 3;
     &--previous  {
       left: 0;
+
       .project-navigation__el-text {
         left: 100%;
       }
@@ -82,6 +83,7 @@
     top: 1.2rem;
     padding: 0 1rem;
     transition: color 0.2s ease-out;
+
   }
 
   .project-navigation__el-icon {
