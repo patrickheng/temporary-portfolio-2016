@@ -4,7 +4,6 @@ import Hammer from 'hammerjs';
 import States from 'core/States';
 import Emitter from 'core/Emitter';
 
-import ProjectLetters from 'components/ProjectLetters';
 import ProjectVisual from 'components/ProjectVisual';
 import ProjectInfos from 'components/ProjectInfos';
 import ProjectTags from 'components/ProjectTags';
