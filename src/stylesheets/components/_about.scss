@@ -52,7 +52,12 @@
     font-size: 3rem;
     margin-bottom: 3rem;
     font-weight: bold;
+    &--awards {
+      font-size: 2rem;
+      margin: 3rem 0 1.5rem;
+    }
   }
+
 
   .about__paragraph {
     font-size: 1.6rem;
@@ -66,6 +71,23 @@
 
       .link {
         font-size: 1.2rem;
+      }
+    }
+  }
+
+  .about__award-list {
+
+  }
+
+  .about__award-el {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+
+    a {
+      color: $color-black;
+      transition: color 0.3s ease-out;
+      &:hover {
+        color: $color-red;
       }
     }
   }

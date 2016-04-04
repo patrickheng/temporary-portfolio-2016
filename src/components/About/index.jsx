@@ -121,6 +121,15 @@ class About extends Component {
             Feel free to <a class="link" href="mailto:hengpatrick.pro@gmail.com" target="_blank">contact me</a> !
           </p>
 
+          <h3 class="about__title about__title--awards">Awards</h3>
+
+          <ul class="about__award-list">
+            <li class="about__award-el"><a href="http://www.awwwards.com/sites/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - Awwwards: Developer award</a></li>
+            <li class="about__award-el"><a href="http://www.awwwards.com/sites/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - Awwwards: Site of the day</a></li>
+            <li class="about__award-el"><a href="http://www.awwwards.com/sites/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - Awwwards: Honorable mention</a></li>
+            <li class="about__award-el"><a href="http://www.cssdesignawards.com/sites/robin-mastromarino-portfolio/28182/" target="_blank">R. Mastromarino - Css Design Award: Website of the day</a></li>
+          </ul>
+
           <p class="about__paragraph about__paragraph--credit">
             Special thanks to <a class="link link--light" href="http://robinmastromarino.com/" target="_blank">Robin Mastromarino</a> for the design.
           </p>
