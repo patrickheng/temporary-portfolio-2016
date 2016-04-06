@@ -85,7 +85,7 @@ class ProjectLetters extends Component {
 
     this.tl
       .set(this.transitionBlock, {transformOrigin: config.startOrigin})
-      .to(this.transitionBlock, 0.5, {scaleX: 1, ease: Back.easeOut.config(0.7)})
+      .to(this.transitionBlock, 0.45, {scaleX: 1, ease: Expo.easeOut})
       .addCallback(()=>{
         for (let i = 0; i < this.projectInfoEls.length; i++) {
           this.projectInfoEls[i].className = "project-infos__el";
