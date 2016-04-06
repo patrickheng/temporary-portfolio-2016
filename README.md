@@ -1,9 +1,15 @@
 # Patrick Heng - Temporary portfolio 2016
 
-Here is my temporary portfolio awaiting the big one.
-Special thanks to [Robin Mastromarino](https://robinmastromarino.com) for the design.
 
-![Preview](https://i.imgsafe.org/dcc7a45.jpg)
+[View website](http://hengpatrick.fr).
+
+
+Here is my temporary portfolio awaiting the big one. 
+
+
+Special thanks to [Robin Mastromarino](http://robinmastromarino.com) for the design.
+
+![Preview](http://hengpatrick.fr/images/share/share.jpg)
 
 #### TECHNOLOGIES
 
@@ -34,7 +40,6 @@ The project will be launched at http://localhost:3000/
 #### TO DO :
 * Replace emitter workflow by socrates or redux
 * Include stylesheets in component folder
-* Add Pixi.js experiement as background
 * Add preact-rooter and case studies
 
 Hope you :purple_heart: it
