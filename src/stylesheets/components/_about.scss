@@ -43,7 +43,7 @@
     height: 100%;
     background: $color-grey-light;
     transform: translateX(100%);
-    padding : $size-border-padding-y $size-border-padding-x;
+    padding : $size-border-padding-y $size-border-padding-x 2rem;
     @include custom-scrollbar;
     overflow: auto;
   }
@@ -100,6 +100,16 @@
   }
 }
 
+@media only screen and (max-height: 760px){
+  .about {
+    .about__paragraph--credit {
+      position: static;
+      text-align: right;
+      transform: translateX(25px);
+    }
+  }
+}
+
 @media only screen and (max-width: 736px){
   .about {
     .about__content {
@@ -121,6 +131,7 @@
     }
     .about__paragraph--credit {
       display: none;
+      transform: none;
     }
   }
 }
