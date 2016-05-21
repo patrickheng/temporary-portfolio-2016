@@ -116,8 +116,6 @@ class About extends Component {
             <br/><br/>
             I have worked for <a class="link link--light" href="https://www.sweetpunk.com/" target="_blank">SweetPunk</a> and I'm currently working at <a class="link link--light" href="http://grouek.com/" target="_blank">Grouek</a>.
             <br/><br/>
-            I’m looking for an apprentiship for August in a web agency.
-            <br/><br/>
             Feel free to <a class="link" href="mailto:hengpatrick.pro@gmail.com" target="_blank">contact me</a> !
           </p>
 
