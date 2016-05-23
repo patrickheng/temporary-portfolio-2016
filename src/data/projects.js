@@ -60,7 +60,7 @@ export default [
     description: 'Project in progress made at Gobelins school. Discover the abyss through an immersive webgl experience.',
     tags: ['reactJs', 'threeJs', 'glsl', 'wip'],
     links: {
-      site: false,
+      site: 'http://abyss.hengpatrick.fr',
       repository: 'https://github.com/SubmarineInteractive/Lux-Operon'
     }
   }
