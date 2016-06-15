@@ -4,7 +4,7 @@
 [View website](http://hengpatrick.fr).
 
 
-Here is my temporary portfolio awaiting the big one. 
+Here is my temporary portfolio awaiting the big one.
 
 
 Special thanks to [Robin Mastromarino](http://robinmastromarino.com) for the design.
@@ -39,7 +39,6 @@ The project will be launched at http://localhost:3000/
 
 #### TO DO :
 * Replace emitter workflow by socrates or redux
-* Include stylesheets in component folder
 * Add preact-rooter and case studies
 
 Hope you :purple_heart: it

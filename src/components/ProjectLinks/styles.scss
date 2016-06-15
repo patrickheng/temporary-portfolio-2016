@@ -1,3 +1,5 @@
+@import '~stylesheets/common/variables';
+
 .project-links {
   position: absolute;
   top: 100%;
@@ -9,7 +11,7 @@
       display: block;
     }
   }
-  
+
   .project-links__el-link {
     margin-left: 2.5rem;
 

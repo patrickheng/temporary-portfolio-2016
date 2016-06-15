@@ -1,3 +1,6 @@
+@import '~stylesheets/common/variables';
+
+
 .project-tags {
   position: absolute;
   top: -2.5rem;
@@ -35,8 +38,6 @@
 
   .project-tags {
     top: -2.2rem;
-    // left: 0;
-    // right: auto;
   }
 }
 

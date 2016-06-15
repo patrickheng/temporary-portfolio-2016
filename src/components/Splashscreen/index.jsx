@@ -1,3 +1,5 @@
+import './styles.scss';
+
 import { h, Component } from 'preact';
 
 import Emitter from 'core/Emitter';
