@@ -1,15 +1,15 @@
 export default [
   {
     id: 0,
-    ref: 'codevember',
-    name: 'Codevember',
-    letters: 'code',
+    ref: 'lux-operon',
+    name: 'Lux Operon',
+    letters: 'lux',
     role: 'Creative developer',
-    description: 'A coding challenge, I made one creative experiments everyday during 15 days.',
-    tags: ['canvas', 'threeJs', 'pixiJs'],
+    description: 'Project in progress made at Gobelins school. Discover the abyss through an immersive webgl experience.',
+    tags: ['reactJs', 'threeJs', 'glsl', 'wip'],
     links: {
-      site: 'http://codepen.io/pat_hg/pens/public/',
-      repository: false
+      site: 'http://luxoperon.io/',
+      repository: 'https://github.com/SubmarineInteractive/Lux-Operon'
     }
   },
   {
@@ -18,7 +18,7 @@ export default [
     letters: 'mastro',
     name: "Mastro",
     role: 'Creative developer',
-    description: 'Portfolio of a UI/UX designer student at HETIC and based in Paris.',
+    description: 'Portfolio of Robin Mastromarino, UI/UX designer student at HETIC and based in Paris.',
     tags: ['awwwards', 'vueJs', 'pixiJs', 'tweenmax'],
     links: {
       site: 'http://robinmastromarino.com/',
@@ -27,6 +27,19 @@ export default [
   },
   {
     id: 2,
+    ref: 'jantana',
+    name: 'Jantana',
+    letters: 'jantana',
+    role: 'Creative developer',
+    description: 'Portfolio of Jantana Hennard, UI/3D designer and student at Gobelins Paris.',
+    tags: ['vueJs', 'virtualScroll', 'wordpressApi'],
+    links: {
+      site: 'http://jant.fr/',
+      repository: false
+    }
+  },
+  {
+    id: 3,
     ref: 'dragand',
     name: 'Dragand',
     letters: 'dragand',
@@ -39,7 +52,20 @@ export default [
     }
   },
   {
-    id: 3,
+    id: 4,
+    ref: 'codevember',
+    name: 'Codevember',
+    letters: 'code',
+    role: 'Creative developer',
+    description: 'A coding challenge, I made one creative experiments everyday during 15 days.',
+    tags: ['canvas', 'threeJs', 'pixiJs'],
+    links: {
+      site: 'http://codepen.io/pat_hg/pens/public/',
+      repository: false
+    }
+  },
+  {
+    id: 5,
     ref: 'agence-tdn',
     name: 'Agence',
     letters : 'tdn',
@@ -49,19 +75,6 @@ export default [
     links: {
       site: 'http://agence.talentsdunumerique.com/',
       repository: false
-    }
-  },
-  {
-    id: 4,
-    ref: 'lux-operon',
-    name: 'Lux Operon',
-    letters: 'lux',
-    role: 'Creative developer',
-    description: 'Project in progress made at Gobelins school. Discover the abyss through an immersive webgl experience.',
-    tags: ['reactJs', 'threeJs', 'glsl', 'wip'],
-    links: {
-      site: 'http://luxoperon.io/',
-      repository: 'https://github.com/SubmarineInteractive/Lux-Operon'
     }
   }
 ];
