@@ -110,7 +110,7 @@ class About extends Component {
           <p class="about__paragraph">
             Hi,
             <br/><br/>
-            I live near Paris and I am a 23 years old creative front-end developer. What interests me the most is canvas and webgl experiments and UI animations.
+            I live near Paris and I am a 23 years old creative front-end developer. What interests me the most is canvas, webgl experiments and UI animations.
             <br/><br/>
             I studied in third year at <a class="link link--light" href="http://www.hetic.net/" target="_blank">HETIC</a> and I'm currently studying at <a class="link link--light" href="http://www.gobelins.fr/" target="_blank">Gobelins Paris</a> in the interactive design formation.
             <br/><br/>
@@ -124,7 +124,6 @@ class About extends Component {
           <ul class="about__award-list">
             <li class="about__award-el"><a href="http://www.awwwards.com/sites/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - Awwwards : Developer award</a></li>
             <li class="about__award-el"><a href="http://www.awwwards.com/sites/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - Awwwards : Site of the day</a></li>
-            <li class="about__award-el"><a href="http://www.awwwards.com/sites/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - Awwwards : Honorable mention</a></li>
             <li class="about__award-el"><a href="http://www.cssdesignawards.com/sites/robin-mastromarino-portfolio/28182/" target="_blank">R. Mastromarino - Css Design Award : Website of the day</a></li>
             <li class="about__award-el"><a href="http://www.thefwa.com/mobile/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - FWA : Mobile of the day</a></li>
           </ul>
