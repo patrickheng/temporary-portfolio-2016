@@ -124,10 +124,11 @@ class About extends Component {
           <h3 class="about__title about__title--awards">Awards</h3>
 
           <ul class="about__award-list">
-            <li class="about__award-el"><a href="http://www.awwwards.com/sites/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - Awwwards : Developer award</a></li>
-            <li class="about__award-el"><a href="http://www.awwwards.com/sites/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - Awwwards : Site of the day</a></li>
+            <li class="about__award-el"><a href="https://thefwa.com/cases/luxoperon" target="_blank">Luxoperon.io - FWA of the day</a></li>
+            <li class="about__award-el"><a href="http://www.cssdesignawards.com/sites/jantana-hennard-portfolio/28641/" target="_blank">Jant.fr - Css Design Award : Website of the day </a></li>
+            <li class="about__award-el"><a href="http://www.awwwards.com/sites/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - Awwwards : SOTD + Developer award</a></li>
             <li class="about__award-el"><a href="http://www.cssdesignawards.com/sites/robin-mastromarino-portfolio/28182/" target="_blank">R. Mastromarino - Css Design Award : Website of the day</a></li>
-            <li class="about__award-el"><a href="http://www.thefwa.com/mobile/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - FWA : Mobile of the day</a></li>
+            <li class="about__award-el"><a href="http://www.thefwa.com/mobile/robin-mastromarino-portfolio" target="_blank">R. Mastromarino - FWA Mobile of the day</a></li>
           </ul>
 
           <img class="about__emoji" src="/images/generics/kiss-emoji.svg" alt="kiss emoji" />

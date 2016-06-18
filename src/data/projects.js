@@ -6,11 +6,12 @@ export default [
     letters: 'lux',
     role: 'Creative developer',
     description: 'Project in progress made at Gobelins school. Discover the abyss through an immersive webgl experience.',
-    tags: ['reactJs', 'threeJs', 'glsl', 'wip'],
+    tags: ['reactJs', 'threeJs', 'glsl', 'gobelins'],
     links: {
       site: 'http://luxoperon.io/',
       repository: 'https://github.com/SubmarineInteractive/Lux-Operon'
-    }
+    },
+    rewards: ['fwa']
   },
   {
     id: 1,
@@ -19,11 +20,12 @@ export default [
     name: "Mastro",
     role: 'Creative developer',
     description: 'Portfolio of Robin Mastromarino, UI/UX designer student at HETIC and based in Paris.',
-    tags: ['awwwards', 'vueJs', 'pixiJs', 'tweenmax'],
+    tags: ['vueJs', 'pixiJs', 'tweenmax'],
     links: {
       site: 'http://robinmastromarino.com/',
       repository: false
-    }
+    },
+    rewards: ['fwa', 'awwwards']
   },
   {
     id: 2,
@@ -36,7 +38,8 @@ export default [
     links: {
       site: 'http://jant.fr/',
       repository: false
-    }
+    },
+    rewards: ['cssda']
   },
   {
     id: 3,
@@ -49,7 +52,8 @@ export default [
     links: {
       site: 'http://dragand.watch/',
       repository: 'https://github.com/dragandwatch'
-    }
+    },
+    rewards: false
   },
   {
     id: 4,
@@ -62,7 +66,8 @@ export default [
     links: {
       site: 'http://codepen.io/pat_hg/pens/public/',
       repository: false
-    }
+    },
+    rewards: false
   },
   {
     id: 5,
@@ -75,6 +80,7 @@ export default [
     links: {
       site: 'http://agence.talentsdunumerique.com/',
       repository: false
-    }
+    },
+    rewards: false
   }
 ];

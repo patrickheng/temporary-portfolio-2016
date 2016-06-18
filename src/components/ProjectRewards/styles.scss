@@ -1,0 +1,39 @@
+@import '~stylesheets/common/variables';
+@import '~stylesheets/common/mixins';
+
+.project-rewards {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+}
+
+.project-reward {
+
+  display: block;
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+  float: right;
+  clear: right;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--awwwards {
+    margin-right: 0;
+    width: 78px;
+    height: 118px;
+    background-image: url('/images/ribbons/awwwards.png');
+  }
+
+  &--fwa {
+    width: 60px;
+    height: 19px;
+    background-image: url('/images/ribbons/fwa.png');
+  }
+
+  &--cssda {
+    width: 30px;
+    height: 28px;
+    background-image: url('/images/ribbons/cssda.png');
+  }
+}

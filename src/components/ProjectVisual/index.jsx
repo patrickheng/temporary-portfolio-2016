@@ -5,6 +5,8 @@ import { h, Component } from 'preact';
 import Emitter from 'core/Emitter';
 import States from 'core/States';
 
+import ProjectRewards from 'components/ProjectRewards';
+
 import {
   PROJECT_CHANGE,
   SPLASHSCREEN_HIDE
@@ -76,15 +78,26 @@ class ProjectVisual extends Component {
     const x = -direction * 0;
 
     this.tl
-      .fromTo(visualActive, 2, {scale: 1.04, x: x + '%'}, {scale: 1, x: "0%", ease: Expo.easeOut})
+      .fromTo(visualActive, 2, {scale: 1.04, x: x + '%'}, {scale: 1, x: "0%", ease: Expo.easeOut});
   }
 
   render({}, {projects, currentProject}) {
     let projectVisuals = [];
 
     for (let i = 0; i < projects.length; i++) {
-      const imgPath = `/images/projects/${projects[i].ref}.jpg`
-      projectVisuals.push(<img class="project-visual__el" src={imgPath} />)
+      const imgPath = `/images/projects/${projects[i].ref}.jpg`;
+      const rewards = (projects[i].rewards) ? <ProjectRewards rewards={projects[i].rewards} /> : '';
+
+      const projectContent = (
+        <li class="project-visual__el">
+          <div class="project-visual__el-content">
+            {rewards}
+            <img class="project-visual__el-img" src={imgPath} />
+          </div>
+        </li>
+      );
+
+      projectVisuals.push(projectContent);
     }
 
     return (
