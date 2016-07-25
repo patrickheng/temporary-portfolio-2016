@@ -26,6 +26,7 @@
   z-index: 1;
 }
 
+.header__lab,
 .header__about {
   position: absolute;
   top: $size-border-padding-y + 0.3rem;
@@ -35,6 +36,7 @@
   transition: color 0.3s ease-out, opacity 0.3s 1.1s ease-out;
   cursor: pointer;
   z-index: 5;
+  color: $color-black;
 
   &:after {
     position: absolute;
@@ -61,12 +63,22 @@
   }
 }
 
+.header__lab {
+  top: $size-border-padding-y + 0.75;
+  right: $size-border-padding-x + 7.5;
+}
+
 
 @media only screen and (max-width: 736px){
 
   .header__logo {
     top: $size-border-padding-y--small;
     left: $size-border-padding-x--small;
+  }
+
+  .header__lab {
+    top: $size-border-padding-y--small + 0.75;
+    right: $size-border-padding-x--small + 7.5;
   }
 
   .header__logo-subtitle {

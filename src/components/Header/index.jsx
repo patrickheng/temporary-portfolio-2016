@@ -26,6 +26,7 @@ class Header extends Component {
       <header class="header">
         <h1 class="header__logo">Patrick Heng</h1>
         <strong class="header__logo-subtitle">creative developer</strong>
+        <a class="header__lab" href="http://lab.hengpatrick.fr" target="_blank">Lab</a>
         <button class="header__about" onClick={this.openAbout}>About</button>
       </header>
     );
