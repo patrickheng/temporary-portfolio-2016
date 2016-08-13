@@ -114,9 +114,9 @@ class About extends Component {
             <br/><br/>
             I live near Paris and I am a 23 years old creative front-end developer. What interests me the most is canvas, webgl experiments and UI animations.
             <br/><br/>
-            I studied in third year at <a class="link link--light" href="http://www.hetic.net/" target="_blank">HETIC</a> and I'm currently studying at <a class="link link--light" href="http://www.gobelins.fr/" target="_blank">Gobelins Paris</a> in the interactive design formation.
+            I studied in third year at <a class="link link--light" href="http://www.hetic.net/" target="_blank">HETIC</a> and I am currently studying at <a class="link link--light" href="http://www.gobelins.fr/" target="_blank">Gobelins Paris</a> in the interactive design formation.
             <br/><br/>
-            I have worked for <a class="link link--light" href="https://www.sweetpunk.com/" target="_blank">SweetPunk</a> and I'm currently working at <a class="link link--light" href="http://grouek.com/" target="_blank">Grouek</a>.
+            I am working at <a class="link link--light" href="merci-michel.com" target="_blank">Merci Michel</a> studio and I have worked for <a class="link link--light" href="http://grouek.com/" target="_blank">Grouek</a> and <a class="link link--light" href="https://www.sweetpunk.com/" target="_blank">SweetPunk</a>.
             <br/><br/>
             Feel free to <a class="link" href="mailto:hengpatrick.pro@gmail.com" target="_blank">contact me</a> !
           </p>

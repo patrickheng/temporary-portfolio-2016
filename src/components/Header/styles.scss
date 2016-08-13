@@ -66,6 +66,9 @@
 .header__lab {
   top: $size-border-padding-y + 0.75;
   right: $size-border-padding-x + 7.5;
+  &:after {
+    top: 124%;
+  }
 }
 
 
