@@ -1,9 +1,20 @@
 export default [
   {
     id: 0,
+    ref: 'xmas-2016',
+    name: 'xmas 2016',
+    role: 'Creative developer',
+    description: '17th day of the advent calendar Christmas Experiments 2016 coded with Mathis Biabiany.',
+    tags: ['threeJs', 'glsl', 'gameDev'],
+    links: {
+      site: 'http://christmasexperiments.com/2016/17/the-gift-chase/',
+      repository: false
+    }
+  },
+  {
+    id: 1,
     ref: 'fm_ph',
     name: 'fm_ph',
-    letters: 'fmph',
     role: 'Creative developer',
     description: '10 experiments made for Codevember 2016 with Fabien Motte.',
     tags: ['codevember', 'threeJs', 'glsl'],
@@ -13,10 +24,9 @@ export default [
     }
   },
   {
-    id: 1,
+    id: 2,
     ref: 'lux-operon',
     name: 'Lux Operon',
-    letters: 'lux',
     role: 'Creative developer',
     description: 'Project in progress made at Gobelins school. Discover the abyss through an immersive webgl experience.',
     tags: ['reactJs', 'threeJs', 'glsl', 'gobelins'],
@@ -27,9 +37,8 @@ export default [
     rewards: ['fwa']
   },
   {
-    id: 2,
+    id: 3,
     ref: 'robin-mastromarino',
-    letters: 'mastro',
     name: 'Mastro',
     role: 'Creative developer',
     description: 'Portfolio of Robin Mastromarino, UI/UX designer student at HETIC and based in Paris.',
@@ -41,10 +50,9 @@ export default [
     rewards: ['fwa', 'awwwards']
   },
   {
-    id: 3,
+    id: 4,
     ref: 'jantana',
     name: 'Jantana',
-    letters: 'jantana',
     role: 'Creative developer',
     description: 'Portfolio of Jantana Hennard, UI/3D designer and student at Gobelins Paris.',
     tags: ['vueJs', 'virtualScroll', 'wordpressApi'],
@@ -55,10 +63,9 @@ export default [
     rewards: ['cssda']
   },
   {
-    id: 4,
+    id: 5,
     ref: 'dragand',
     name: 'Dragand',
-    letters: 'dragand',
     role: 'Co-creator / Js developer',
     description: 'Desktop application that allows you to get your favorite subtitles by dragging and dropping your file in the app.',
     tags: ['angularJs', 'nodeWebkit', 'producthunt'],
@@ -69,10 +76,9 @@ export default [
     rewards: false
   },
   {
-    id: 5,
+    id: 6,
     ref: 'codevember',
     name: 'Codevember',
-    letters: 'code',
     role: 'Creative developer',
     description: 'A coding challenge, I made one creative experiments everyday during 15 days.',
     tags: ['canvas', 'threeJs', 'pixiJs'],
@@ -83,10 +89,9 @@ export default [
     rewards: false
   },
   {
-    id: 6,
+    id: 7,
     ref: 'agence-tdn',
     name: 'Agence',
-    letters: 'tdn',
     role: 'Front-end / Back-end developer',
     description: 'Discover the professions present in web agencies in a fun and educational way with talents du numerique.',
     tags: ['angularJs', 'wordpressApi', 'tweenmax'],
