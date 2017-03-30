@@ -62,12 +62,13 @@ class ProjectTags extends Component {
   }
 
   render(props, {projects, currentProject}) {
-
+    const number = currentProject.id < 9 ? `0${currentProject.id + 1}` : currentProject.id + 1
+    const pLength = projects.length < 9 ? `0${projects.length}` : projects.length
     return (
       <div class="project-index">
 
         <span class="project-index__line"></span>
-        <span class="project-index__number">0{currentProject.id + 1}</span>
+        <span class="project-index__number">{number}</span>
         <span class="project-index__total">{projects.length}</span>
 
       </div>
