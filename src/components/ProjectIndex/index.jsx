@@ -68,7 +68,7 @@ class ProjectTags extends Component {
 
         <span class="project-index__line"></span>
         <span class="project-index__number">0{currentProject.id + 1}</span>
-        <span class="project-index__total">0{projects.length}</span>
+        <span class="project-index__total">{projects.length}</span>
 
       </div>
     );

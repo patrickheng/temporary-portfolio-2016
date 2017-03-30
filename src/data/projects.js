@@ -1,10 +1,35 @@
 export default [
   {
     id: 0,
-    ref: 'xmas-2016',
-    name: 'xmas 2016',
+    ref: 'vyctoire',
+    name: 'Vyctoire',
     role: 'Creative developer',
-    description: '17th day of the advent calendar Christmas Experiments 2016 coded with Mathis Biabiany.',
+    description: 'Portfolio of Victoire Douy, UI/UX designer student at Gobelins and working at Spintank.',
+    tags: ['vueJs', 'gsap', 'wordpressApi'],
+    links: {
+      site: 'http://vyctoire.com',
+      repository: false
+    }
+  },
+  {
+    id: 1,
+    ref: 'merci-michel',
+    name: 'Merci Michel',
+    role: 'Creative developer',
+    description: 'Part of the developement of Merci-Michel studio website.',
+    tags: ['threeJs', 'glsl', 'gsap'],
+    links: {
+      site: 'http://www.merci-michel.com/',
+      repository: false
+    },
+    rewards: ['fwa', 'awwwards']
+  },
+  {
+    id: 2,
+    ref: 'xmas-2016',
+    name: 'Xmas 2016',
+    role: 'Creative developer',
+    description: '17th day of the advent calendar Christmas Experiments 2016.',
     tags: ['threeJs', 'glsl', 'gameDev'],
     links: {
       site: 'http://christmasexperiments.com/2016/17/the-gift-chase/',
@@ -12,7 +37,7 @@ export default [
     }
   },
   {
-    id: 1,
+    id: 3,
     ref: 'fm_ph',
     name: 'fm_ph',
     role: 'Creative developer',
@@ -24,7 +49,7 @@ export default [
     }
   },
   {
-    id: 2,
+    id: 4,
     ref: 'lux-operon',
     name: 'Lux Operon',
     role: 'Creative developer',
@@ -37,12 +62,12 @@ export default [
     rewards: ['fwa']
   },
   {
-    id: 3,
+    id: 5,
     ref: 'robin-mastromarino',
     name: 'Mastro',
     role: 'Creative developer',
     description: 'Portfolio of Robin Mastromarino, UI/UX designer student at HETIC and based in Paris.',
-    tags: ['vueJs', 'pixiJs', 'tweenmax'],
+    tags: ['vueJs', 'pixiJs', 'gsap'],
     links: {
       site: 'http://robinmastromarino.com/',
       repository: false
@@ -50,7 +75,7 @@ export default [
     rewards: ['fwa', 'awwwards']
   },
   {
-    id: 4,
+    id: 6,
     ref: 'jantana',
     name: 'Jantana',
     role: 'Creative developer',
@@ -63,7 +88,7 @@ export default [
     rewards: ['cssda']
   },
   {
-    id: 5,
+    id: 7,
     ref: 'dragand',
     name: 'Dragand',
     role: 'Co-creator / Js developer',
@@ -76,7 +101,7 @@ export default [
     rewards: false
   },
   {
-    id: 6,
+    id: 8,
     ref: 'codevember',
     name: 'Codevember',
     role: 'Creative developer',
@@ -89,12 +114,12 @@ export default [
     rewards: false
   },
   {
-    id: 7,
+    id: 9,
     ref: 'agence-tdn',
     name: 'Agence',
     role: 'Front-end / Back-end developer',
     description: 'Discover the professions present in web agencies in a fun and educational way with talents du numerique.',
-    tags: ['angularJs', 'wordpressApi', 'tweenmax'],
+    tags: ['angularJs', 'wordpressApi', 'gsap'],
     links: {
       site: 'http://agence.talentsdunumerique.com/',
       repository: false
