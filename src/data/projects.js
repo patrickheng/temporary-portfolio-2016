@@ -9,7 +9,8 @@ export default [
     links: {
       site: 'http://vyctoire.com',
       repository: false
-    }
+    },
+    rewards: ['cssda']
   },
   {
     id: 1,
