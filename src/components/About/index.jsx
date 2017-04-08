@@ -124,7 +124,7 @@ class About extends Component {
           <h3 class="about__title about__title--awards">Awards</h3>
 
           <ul class="about__award-list">
-            <li class="about__award-el"><a href="https://www.awwwards.com/sites/victoire-douy-portfolio" target="_blank">Vyctoire  - Awwwards : SOTD</a></li>
+            <li class="about__award-el"><a href="https://www.awwwards.com/sites/victoire-douy-portfolio" target="_blank">Vyctoire  - Awwwards : SOTD + Developer award</a></li>
             <li class="about__award-el"><a href="http://www.cssdesignawards.com/sites/victoire-douy-portfolio/30385/" target="_blank">Vyctoire - Css Design Award : Website of the day</a></li>
             <li class="about__award-el"><a href="https://thefwa.com/cases/merci-michel" target="_blank">Merci-Michel - FWA of the day</a></li>
             <li class="about__award-el"><a href="https://www.awwwards.com/sites/merci-michel" target="_blank">Merci-Michel - Awwwards : SOTD</a></li>
