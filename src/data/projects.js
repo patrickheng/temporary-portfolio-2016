@@ -23,7 +23,7 @@ export default [
       site: 'http://vyctoire.com',
       repository: false
     },
-    rewards: ['cssda']
+    rewards: ['cssda', 'awwwards']
   },
   {
     id: 2,
