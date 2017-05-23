@@ -1,6 +1,19 @@
 export default [
   {
     id: 0,
+    ref: 'ouigo',
+    name: 'Ouigo Pinball',
+    role: 'Creative developer',
+    description: 'Part of the developement of Ouigo Pinball by Merci-Michel.',
+    tags: ['threeJs', 'glsl', 'p2Js'],
+    links: {
+      site: 'http://letsplay.ouigo.com',
+      repository: false
+    },
+    rewards: ['fwa']
+  },
+  {
+    id: 1,
     ref: 'vyctoire',
     name: 'Vyctoire',
     role: 'Creative developer',
@@ -13,7 +26,7 @@ export default [
     rewards: ['cssda']
   },
   {
-    id: 1,
+    id: 2,
     ref: 'merci-michel',
     name: 'Merci Michel',
     role: 'Creative developer',
@@ -26,7 +39,7 @@ export default [
     rewards: ['fwa', 'awwwards']
   },
   {
-    id: 2,
+    id: 3,
     ref: 'xmas-2016',
     name: 'Xmas 2016',
     role: 'Creative developer',
@@ -38,7 +51,7 @@ export default [
     }
   },
   {
-    id: 3,
+    id: 4,
     ref: 'fm_ph',
     name: 'fm_ph',
     role: 'Creative developer',
@@ -50,7 +63,7 @@ export default [
     }
   },
   {
-    id: 4,
+    id: 5,
     ref: 'lux-operon',
     name: 'Lux Operon',
     role: 'Creative developer',
@@ -63,7 +76,7 @@ export default [
     rewards: ['fwa']
   },
   {
-    id: 5,
+    id: 6,
     ref: 'robin-mastromarino',
     name: 'Mastro',
     role: 'Creative developer',
@@ -76,7 +89,7 @@ export default [
     rewards: ['fwa', 'awwwards']
   },
   {
-    id: 6,
+    id: 7,
     ref: 'jantana',
     name: 'Jantana',
     role: 'Creative developer',
@@ -89,7 +102,7 @@ export default [
     rewards: ['cssda']
   },
   {
-    id: 7,
+    id: 8,
     ref: 'dragand',
     name: 'Dragand',
     role: 'Co-creator / Js developer',
@@ -102,7 +115,7 @@ export default [
     rewards: false
   },
   {
-    id: 8,
+    id: 9,
     ref: 'codevember',
     name: 'Codevember',
     role: 'Creative developer',
@@ -113,18 +126,18 @@ export default [
       repository: false
     },
     rewards: false
-  },
-  {
-    id: 9,
-    ref: 'agence-tdn',
-    name: 'Agence',
-    role: 'Front-end / Back-end developer',
-    description: 'Discover the professions present in web agencies in a fun and educational way with talents du numerique.',
-    tags: ['angularJs', 'wordpressApi', 'gsap'],
-    links: {
-      site: 'http://agence.talentsdunumerique.com/',
-      repository: false
-    },
-    rewards: false
   }
+  // {
+  //   id: 10,
+  //   ref: 'agence-tdn',
+  //   name: 'Agence',
+  //   role: 'Front-end / Back-end developer',
+  //   description: 'Discover the professions present in web agencies in a fun and educational way with talents du numerique.',
+  //   tags: ['angularJs', 'wordpressApi', 'gsap'],
+  //   links: {
+  //     site: 'http://agence.talentsdunumerique.com/',
+  //     repository: false
+  //   },
+  //   rewards: false
+  // }
 ]
