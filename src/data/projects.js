@@ -4,13 +4,13 @@ export default [
     ref: 'ouigo',
     name: 'Ouigo Pinball',
     role: 'Creative developer',
-    description: 'Part of the developement of Ouigo Pinball by Merci-Michel.',
+    description: "Part of the developement of Ouigo let's play, a pinball made in WebGL by Merci-Michel.",
     tags: ['threeJs', 'glsl', 'p2Js'],
     links: {
       site: 'http://letsplay.ouigo.com',
       repository: false
     },
-    rewards: ['fwa']
+    rewards: ['fwa', 'awwwards']
   },
   {
     id: 1,
@@ -67,7 +67,7 @@ export default [
     ref: 'lux-operon',
     name: 'Lux Operon',
     role: 'Creative developer',
-    description: 'Project in progress made at Gobelins school. Discover the abyss through an immersive webgl experience.',
+    description: 'Project made at Gobelins school. Discover the abyss through an immersive webgl experience.',
     tags: ['reactJs', 'threeJs', 'glsl', 'gobelins'],
     links: {
       site: 'http://luxoperon.io/',
