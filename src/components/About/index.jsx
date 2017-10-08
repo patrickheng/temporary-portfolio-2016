@@ -112,7 +112,7 @@ class About extends Component {
           <p class="about__paragraph">
             Hi,
             <br/><br/>
-            I live near Paris and I am a 23 years old creative front-end developer. What interests me the most is canvas, webgl experiments and UI animations.
+            I live near Paris and I am a 24 years old creative front-end developer. What interests me the most is canvas, webgl experiments and UI animations.
             <br/><br/>
             I studied in third year at <a class="link link--light" href="http://www.hetic.net/" target="_blank">HETIC</a> and I am currently studying at <a class="link link--light" href="http://www.gobelins.fr/" target="_blank">Gobelins Paris</a> in the interactive design formation.
             <br/><br/>
@@ -124,10 +124,11 @@ class About extends Component {
           <h3 class="about__title about__title--awards">Awards</h3>
 
           <ul class="about__award-list">
+            <li class="about__award-el"><a href="https://www.awwwards.com/sites/fanny-myard" target="_blank">Fanny Myard  - Awwwards : SOTD</a></li>
             <li class="about__award-el"><a href="https://thefwa.com/cases/ouigo-lets-play" target="_blank">Ouigo - FWA of the month</a></li>
             <li class="about__award-el"><a href="https://www.awwwards.com/sites/ouigo-let-s-play" target="_blank">Ouigo - Awwwards : Site of the month + Dev award</a></li>
             <li class="about__award-el"><a href="http://www.cssdesignawards.com/sites/victoire-douy-portfolio/30385/" target="_blank">Vyctoire - Css Design Award : Website of the day</a></li>
-            <li class="about__award-el"><a href="https://www.awwwards.com/sites/victoire-douy-portfolio" target="_blank">Vyctoire  - Awwwards : SOTD + Dev award</a></li>
+            <li class="about__award-el"><a href="https://www.awwwards.com/sites/victoire-douy-portfolio" target="_blank">Vyctoire - Awwwards : SOTD + Dev award</a></li>
             <li class="about__award-el"><a href="http://www.cssdesignawards.com/sites/victoire-douy-portfolio/30385/" target="_blank">Vyctoire - Css Design Award : Website of the day</a></li>
             <li class="about__award-el"><a href="https://www.siteinspire.com/websites/7186-victoire-douy" target="_blank">Vyctoire - Featured on Site Inspire</a></li>
             <li class="about__award-el"><a href="https://thefwa.com/cases/merci-michel" target="_blank">Merci-Michel - FWA of the day</a></li>
@@ -140,10 +141,6 @@ class About extends Component {
           </ul>
 
           <img class="about__emoji" src="/images/generics/kiss-emoji.svg" alt="kiss emoji" />
-
-          <p class="about__paragraph about__paragraph--credit">
-            Special thanks to <a class="link link--light" href="http://robinmastromarino.com/" target="_blank">Robin Mastromarino</a> for the design.
-          </p>
 
         </div>
       </aside>

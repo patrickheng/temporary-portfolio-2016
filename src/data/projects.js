@@ -14,6 +14,19 @@ export default [
   },
   {
     id: 1,
+    ref: 'fanny-myard',
+    name: 'Fanny Myard',
+    role: 'Creative developer',
+    description: "Showcase of Fanny Myard's ready-to-wear collections.",
+    tags: ['pixiJs', 'glsl', 'quark'],
+    links: {
+      site: 'http://fannymyard-design.com',
+      repository: false
+    },
+    rewards: ['awwwards']
+  },
+  {
+    id: 2,
     ref: 'vyctoire',
     name: 'Vyctoire',
     role: 'Creative developer',
@@ -26,7 +39,7 @@ export default [
     rewards: ['cssda', 'awwwards']
   },
   {
-    id: 2,
+    id: 3,
     ref: 'merci-michel',
     name: 'Merci Michel',
     role: 'Creative developer',
@@ -39,7 +52,7 @@ export default [
     rewards: ['fwa', 'awwwards']
   },
   {
-    id: 3,
+    id: 4,
     ref: 'xmas-2016',
     name: 'Xmas 2016',
     role: 'Creative developer',
@@ -51,7 +64,7 @@ export default [
     }
   },
   {
-    id: 4,
+    id: 5,
     ref: 'fm_ph',
     name: 'fm_ph',
     role: 'Creative developer',
@@ -63,7 +76,7 @@ export default [
     }
   },
   {
-    id: 5,
+    id: 6,
     ref: 'lux-operon',
     name: 'Lux Operon',
     role: 'Creative developer',
@@ -76,7 +89,7 @@ export default [
     rewards: ['fwa']
   },
   {
-    id: 6,
+    id: 7,
     ref: 'robin-mastromarino',
     name: 'Mastro',
     role: 'Creative developer',
@@ -89,7 +102,7 @@ export default [
     rewards: ['fwa', 'awwwards']
   },
   {
-    id: 7,
+    id: 8,
     ref: 'jantana',
     name: 'Jantana',
     role: 'Creative developer',
@@ -102,7 +115,7 @@ export default [
     rewards: ['cssda']
   },
   {
-    id: 8,
+    id: 9,
     ref: 'dragand',
     name: 'Dragand',
     role: 'Co-creator / Js developer',
@@ -113,20 +126,20 @@ export default [
       repository: 'https://github.com/dragandwatch'
     },
     rewards: false
-  },
-  {
-    id: 9,
-    ref: 'codevember',
-    name: 'Codevember',
-    role: 'Creative developer',
-    description: 'A coding challenge, I made one creative experiments everyday during 15 days.',
-    tags: ['canvas', 'threeJs', 'pixiJs'],
-    links: {
-      site: 'http://codepen.io/pat_hg/pens/public/',
-      repository: false
-    },
-    rewards: false
   }
+  // {
+  //   id: 9,
+  //   ref: 'codevember',
+  //   name: 'Codevember',
+  //   role: 'Creative developer',
+  //   description: 'A coding challenge, I made one creative experiments everyday during 15 days.',
+  //   tags: ['canvas', 'threeJs', 'pixiJs'],
+  //   links: {
+  //     site: 'http://codepen.io/pat_hg/pens/public/',
+  //     repository: false
+  //   },
+  //   rewards: false
+  // }
   // {
   //   id: 10,
   //   ref: 'agence-tdn',
