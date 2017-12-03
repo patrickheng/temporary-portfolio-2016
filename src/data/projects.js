@@ -1,6 +1,18 @@
 export default [
   {
     id: 0,
+    ref: 'playdoh',
+    name: 'Play-Doh',
+    role: 'Creative developer',
+    description: 'Part of the developement of Play-Doh: La galerie des espèces by Merci-Michel.',
+    tags: ['threeJs', 'gsap'],
+    links: {
+      site: 'http://playdoh-lagaleriedesespeces.com/',
+      repository: false
+    }
+  },
+  {
+    id: 1,
     ref: 'ouigo',
     name: 'Ouigo Pinball',
     role: 'Creative developer',
@@ -13,7 +25,7 @@ export default [
     rewards: ['fwa', 'awwwards']
   },
   {
-    id: 1,
+    id: 2,
     ref: 'fanny-myard',
     name: 'Fanny Myard',
     role: 'Creative developer',
@@ -23,10 +35,10 @@ export default [
       site: 'http://fannymyard-design.com',
       repository: false
     },
-    rewards: ['awwwards']
+    rewards: ['cssda', 'awwwards']
   },
   {
-    id: 2,
+    id: 3,
     ref: 'vyctoire',
     name: 'Vyctoire',
     role: 'Creative developer',
@@ -39,7 +51,7 @@ export default [
     rewards: ['cssda', 'awwwards']
   },
   {
-    id: 3,
+    id: 4,
     ref: 'merci-michel',
     name: 'Merci Michel',
     role: 'Creative developer',
@@ -52,26 +64,14 @@ export default [
     rewards: ['fwa', 'awwwards']
   },
   {
-    id: 4,
+    id: 5,
     ref: 'xmas-2016',
     name: 'Xmas 2016',
     role: 'Creative developer',
     description: '17th day of the advent calendar Christmas Experiments 2016.',
     tags: ['threeJs', 'glsl', 'gameDev'],
     links: {
-      site: 'http://christmasexperiments.com/2016/17/the-gift-chase/',
-      repository: false
-    }
-  },
-  {
-    id: 5,
-    ref: 'fm_ph',
-    name: 'fm_ph',
-    role: 'Creative developer',
-    description: '10 experiments made for Codevember 2016 with Fabien Motte.',
-    tags: ['codevember', 'threeJs', 'glsl'],
-    links: {
-      site: 'http://codepen.io/fm_ph/pens/public/',
+      site: 'http://xmas2016.hengpatrick.fr',
       repository: false
     }
   },
@@ -116,17 +116,29 @@ export default [
   },
   {
     id: 9,
-    ref: 'dragand',
-    name: 'Dragand',
-    role: 'Co-creator / Js developer',
-    description: 'Desktop application that allows you to get your favorite subtitles by dragging and dropping your file in the app.',
-    tags: ['angularJs', 'nodeWebkit', 'producthunt'],
+    ref: 'fm_ph',
+    name: 'fm_ph',
+    role: 'Creative developer',
+    description: '10 experiments made for Codevember 2016 with Fabien Motte.',
+    tags: ['codevember', 'threeJs', 'glsl'],
     links: {
-      site: 'http://dragand.watch/',
-      repository: 'https://github.com/dragandwatch'
-    },
-    rewards: false
+      site: 'http://codepen.io/fm_ph/pens/public/',
+      repository: false
+    }
   }
+  // {
+  //   id: 9,
+  //   ref: 'dragand',
+  //   name: 'Dragand',
+  //   role: 'Co-creator / Js developer',
+  //   description: 'Desktop application that allows you to get your favorite subtitles by dragging and dropping your file in the app.',
+  //   tags: ['angularJs', 'nodeWebkit', 'producthunt'],
+  //   links: {
+  //     site: 'http://dragand.watch/',
+  //     repository: 'https://github.com/dragandwatch'
+  //   },
+  //   rewards: false
+  // }
   // {
   //   id: 9,
   //   ref: 'codevember',
