@@ -126,6 +126,7 @@ class About extends Component {
           <ul class="about__award-list">
             <li class="about__award-el"><a href="https://thefwa.com/cases/ouigo-lets-play" target="_blank">Ouigo - FWA of the Year</a></li>
             <li class="about__award-el"><a href="https://www.awwwards.com/sites/ouigo-let-s-play" target="_blank">Ouigo - Awwwards : SOTM + Dev award</a></li>
+            <li class="about__award-el"><a href="https://thefwa.com/cases/hp-mini-big-books-p2" target="_blank">HP Mini Big Books - FWA of the day</a></li>
             <li class="about__award-el"><a href="https://www.awwwards.com/sites/the-resourcing-machine-2" target="_blank">Veolia Resourcing Machine - Awwwards : SOTD</a></li>
             <li class="about__award-el"><a href="https://thefwa.com/cases/the-ressourcing-machine-by-veolia" target="_blank">Veolia Resourcing Machine - FWA of the day</a></li>
             <li class="about__award-el"><a href="https://www.awwwards.com/sites/fanny-myard" target="_blank">Fanny Myard - Awwwards : SOTD + Dev award</a></li>
