@@ -124,10 +124,12 @@ class About extends Component {
           <h3 class="about__title about__title--awards">Awards</h3>
 
           <ul class="about__award-list">
+            <li class="about__award-el"><a href="https://thefwa.com/cases/ouigo-lets-play" target="_blank">Ouigo - FWA of the Year</a></li>
+            <li class="about__award-el"><a href="https://www.awwwards.com/sites/ouigo-let-s-play" target="_blank">Ouigo - Awwwards : SOTM + Dev award</a></li>
+            <li class="about__award-el"><a href="https://www.awwwards.com/sites/the-resourcing-machine-2" target="_blank">Veolia Resourcing Machine - Awwwards : SOTD</a></li>
+            <li class="about__award-el"><a href="https://thefwa.com/cases/the-ressourcing-machine-by-veolia" target="_blank">Veolia Resourcing Machine - FWA of the day</a></li>
             <li class="about__award-el"><a href="https://www.awwwards.com/sites/fanny-myard" target="_blank">Fanny Myard - Awwwards : SOTD + Dev award</a></li>
             <li class="about__award-el"><a href="https://www.cssdesignawards.com/sites/fanny-myard/31541/" target="_blank">Fanny Myard - Css Design Award : Website of the day</a></li>
-            <li class="about__award-el"><a href="https://thefwa.com/cases/ouigo-lets-play" target="_blank">Ouigo - FWA of the month</a></li>
-            <li class="about__award-el"><a href="https://www.awwwards.com/sites/ouigo-let-s-play" target="_blank">Ouigo - Awwwards : SOTM + Dev award</a></li>
             <li class="about__award-el"><a href="http://www.cssdesignawards.com/sites/victoire-douy-portfolio/30385/" target="_blank">Vyctoire - Css Design Award : Website of the day</a></li>
             <li class="about__award-el"><a href="https://www.awwwards.com/sites/victoire-douy-portfolio" target="_blank">Vyctoire - Awwwards : SOTD + Dev award</a></li>
             <li class="about__award-el"><a href="http://www.cssdesignawards.com/sites/victoire-douy-portfolio/30385/" target="_blank">Vyctoire - Css Design Award : Website of the day</a></li>

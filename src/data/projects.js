@@ -1,6 +1,18 @@
 export default [
   {
     id: 0,
+    ref: 'xmas-2017',
+    name: 'Xmas 2017',
+    role: 'Creative developer',
+    description: '14th day of the advent calendar Christmas Experiments 2017 made with Mathis Biabiany.',
+    tags: ['threeJs', 'glsl', 'vjing'],
+    links: {
+      site: 'http://xmas2016.hengpatrick.fr',
+      repository: false
+    }
+  },
+  {
+    id: 1,
     ref: 'playdoh',
     name: 'Play-Doh',
     role: 'Creative developer',
@@ -12,7 +24,7 @@ export default [
     }
   },
   {
-    id: 1,
+    id: 2,
     ref: 'ouigo',
     name: 'Ouigo Pinball',
     role: 'Creative developer',
@@ -25,7 +37,7 @@ export default [
     rewards: ['fwa', 'awwwards']
   },
   {
-    id: 2,
+    id: 3,
     ref: 'fanny-myard',
     name: 'Fanny Myard',
     role: 'Creative developer',
@@ -38,7 +50,7 @@ export default [
     rewards: ['cssda', 'awwwards']
   },
   {
-    id: 3,
+    id: 4,
     ref: 'vyctoire',
     name: 'Vyctoire',
     role: 'Creative developer',
@@ -51,7 +63,7 @@ export default [
     rewards: ['cssda', 'awwwards']
   },
   {
-    id: 4,
+    id: 5,
     ref: 'merci-michel',
     name: 'Merci Michel',
     role: 'Creative developer',
@@ -64,11 +76,11 @@ export default [
     rewards: ['fwa', 'awwwards']
   },
   {
-    id: 5,
+    id: 6,
     ref: 'xmas-2016',
     name: 'Xmas 2016',
     role: 'Creative developer',
-    description: '17th day of the advent calendar Christmas Experiments 2016.',
+    description: '17th day of the advent calendar Christmas Experiments 2016 made with Mathis Biabiany.',
     tags: ['threeJs', 'glsl', 'gameDev'],
     links: {
       site: 'http://xmas2016.hengpatrick.fr',
@@ -76,7 +88,7 @@ export default [
     }
   },
   {
-    id: 6,
+    id: 7,
     ref: 'lux-operon',
     name: 'Lux Operon',
     role: 'Creative developer',
@@ -89,7 +101,7 @@ export default [
     rewards: ['fwa']
   },
   {
-    id: 7,
+    id: 8,
     ref: 'robin-mastromarino',
     name: 'Mastro',
     role: 'Creative developer',
@@ -100,19 +112,6 @@ export default [
       repository: false
     },
     rewards: ['fwa', 'awwwards']
-  },
-  {
-    id: 8,
-    ref: 'jantana',
-    name: 'Jantana',
-    role: 'Creative developer',
-    description: 'Portfolio of Jantana Hennard, UI/3D designer and student at Gobelins Paris.',
-    tags: ['vueJs', 'virtualScroll', 'wordpressApi'],
-    links: {
-      site: 'http://jant.fr/',
-      repository: false
-    },
-    rewards: ['cssda']
   },
   {
     id: 9,
@@ -126,6 +125,19 @@ export default [
       repository: false
     }
   }
+  // {
+  //   id: 8,
+  //   ref: 'jantana',
+  //   name: 'Jantana',
+  //   role: 'Creative developer',
+  //   description: 'Portfolio of Jantana Hennard, UI/3D designer and student at Gobelins Paris.',
+  //   tags: ['vueJs', 'virtualScroll', 'wordpressApi'],
+  //   links: {
+  //     site: 'http://jant.fr/',
+  //     repository: false
+  //   },
+  //   rewards: ['cssda']
+  // },
   // {
   //   id: 9,
   //   ref: 'dragand',
